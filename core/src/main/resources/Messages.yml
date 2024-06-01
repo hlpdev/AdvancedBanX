@@ -1,307 +1,310 @@
+# AdvancedBan v3 - Coded by Leoko, Update & Maintained by 2vY (hlpdev)
+# Normal Color Codes along with MiniMessage (https://docs.advntr.dev/minimessage/format.html) are available in all strings
+
 General:
-  Prefix: "&c&lAdvancedBan &8&l»"
-  NoPerms: "&cYou don't have perms for that!"
-  LayoutNotFound: "&cThere is no layout called %NAME%"
+  Prefix: "<red><bold>AdvancedBanX</red> <dark_gray>»</dark_gray></bold>"
+  NoPerms: "<red>You don't have perms for that!</red>"
+  LayoutNotFound: "<red>There is no layout called %NAME%</red>"
   # This will be the replacement for the %DURATION% variable
   TimeLayoutD: "%D%day(s) %H%h %M%min and %S%sec"
   TimeLayoutH: "%H%hour(s) %M%min and %S%sec"
   TimeLayoutM: "%M%min and %S%sec"
   TimeLayoutS: "%S% seconds"
-  FailedFetch: "&cCould not fetch the UUID of %NAME%! See console for details."
+  FailedFetch: "<red>Could not fetch the UUID of %NAME%! See console for details.</red>"
 
 
 Ban:
-  Usage: "&cUsage &8» &7&o/ban (-s) [Name] [Reason/@Layout]"
-  Done: "&c&o%NAME% &7was successfully banned!"
-  AlreadyDone: "&c&o%NAME% &7has already been banned!"
-  Exempt: "&7You are not able to ban &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/ban (-s) [Name] [Reason/@Layout]</italic></gray>"
+  Done: "<italic><red>%NAME%</red></italic> <gray>was successfully banned!</gray>"
+  AlreadyDone: "<italic><red>%NAME%</red></italic> <gray>has already been banned!</gray>"
+  Exempt: "<gray>You are not able to ban <red><italic>%NAME%</italic></red></gray>"
   Layout:
-  - '%PREFIX% &7Permanently banned'
-  - '&7'
-  - '&7'
-  - "&cReason &8» &7%REASON%"
-  - '&7'
-  - '&8Unban application in TS or forum'
-  - "&eTS-Ip &8» &c&ncoming soon"
-  - "&eForum &8» &c&ncoming soon"
+    - '%PREFIX% <gray>Permanently banned</gray>'
+    - ''
+    - ''
+    - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
+    - ''
+    - '<dark_gray>Unban application in TS or forum</dark_gray>'
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
   Notification:
-  - "&c&o%NAME% &7got banned by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  UndoNotification: "&e&o%OPERATOR% &7unbanned &c&o%NAME%"
+    - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+  UndoNotification: "<yellow><italic>%OPERATOR%</italic></yellow> <gray>unbanned</gray> <red><italic>%NAME%</italic></red>"
 
 Ipban:
-  Usage: "&cUsage &8» &7&o/banip (-s) [Name/IP] [Reason/@Layout]"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/banip (-s) [Name/IP] [Reason/@Layout]</italic></gray>"
   Layout:
-  - '%PREFIX% &7Permanently banned'
-  - '&7'
-  - '&7'
-  - "&cReason &8» &7%REASON%"
-  - '&7'
-  - '&8Unban application in TS or forum'
-  - "&eTS-Ip &8» &c&ncoming soon"
-  - "&eForum &8» &c&ncoming soon"
+    - '%PREFIX% <gray>Permanently banned</gray>'
+    - ''
+    - ''
+    - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
+    - ''
+    - '<dark_gray>Unban application in TS or forum</dark_gray>'
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
   Notification:
-  - "&c&o%NAME% &7got banned by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  IpNotCashed: "&cThere is no saved IP for %NAME%!"
+    - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+  IpNotCashed: "<red>There is no saved IP for <italic>%NAME%!</italic></red>"
 
 Tempban:
-  Usage: "&cUsage &8» &7&o/tempban (-s) [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
-  MaxDuration: "&cYou are not able to ban more than %MAX%sec"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/tempban (-s) [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]</italic></gray>"
+  MaxDuration: "<red>You are not able to ban more than %MAX%sec</red>"
   Layout:
-  - '%PREFIX% &7Temporarily banned'
-  - '&7'
-  - '&7'
-  - "&cReason &8» &7%REASON%"
-  - "&cDuration &8» &7%DURATION%"
-  - '&7'
-  - '&8Unban application in TS or forum'
-  - "&eTS-Ip &8» &c&ncoming soon"
-  - "&eForum &8» &c&ncoming soon"
+    - '%PREFIX% <gray>Temporarily banned</gray>'
+    - ''
+    - ''
+    - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
+    - "<red>Duration <dark_gray>»</dark_gray></red> <gray>%DURATION%</gray>"
+    - ''
+    - '<dark_gray>Unban application in TS or forum</dark_gray>'
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
   Notification:
-  - "&c&o%NAME% &7got banned by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  - "&7&oThis player got banned for &e&o%DURATION%"
+    - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+    - "<gray><italic>This player got banned for <yellow>DURATION%</yellow></italic></gray>"
 
 Tempipban:
-  Usage: "&cUsage &8» &7&o/tempipban (-s) [Name/IP] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
-  MaxDuration: "&cYou are not able to ban more than %MAX%sec"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/tempipban (-s) [Name/IP] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]</italic></gray>"
+  MaxDuration: "<red>You are not able to ban more than %MAX%sec</red>"
   Layout:
-  - '%PREFIX% &7Temporarily banned'
-  - '&7'
-  - '&7'
-  - "&cReason &8» &7%REASON%"
-  - "&cDuration &8» &7%DURATION%"
-  - '&7'
-  - '&8Unban application in TS or forum'
-  - "&eTS-Ip &8» &c&ncoming soon"
-  - "&eForum &8» &c&ncoming soon"
+    - '%PREFIX% <gray>Temporarily banned</gray>'
+    - ''
+    - ''
+    - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
+    - "<red>Duration <dark_gray>»</dark_gray></red> <gray>%DURATION%</gray>"
+    - ''
+    - '<dark_gray>Unban application in TS or forum</dark_gray>'
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
   Notification:
-  - "&c&o%NAME% &7got banned by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  - "&7&oThis player got banned for &e&o%DURATION%"
+    - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+    - "<gray><italic>This player got banned for <yellow>DURATION%</yellow></italic></gray>"
 
 Mute:
-  Usage: "&cUsage &8» &7&o/mute (-s) [Name] [Reason/@Layout]"
-  Done: "&c&o%NAME% &7was successfully muted!"
-  AlreadyDone: "&c&o%NAME% &7has already been muted!"
-  Exempt: "&7You are not able to mute &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/mute (-s) [Name] [Reason/@Layout]</italic></gray>"
+  Done: "<red><italic>%NAME%</italic></red> <gray>was successfully muted!</gray>"
+  AlreadyDone: "<red><italic>%NAME%</italic></red> <gray>has already been muted!</gray>"
+  Exempt: "<gray>You are not able to mute <red><italic>%NAME%</italic></red>"
   Layout:
-  - '%PREFIX% &7You are permanently muted'
-  - "&cReason &8» &7%REASON%"
+    - '%PREFIX% <gray>You are permanently muted</gray>'
+    - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
   Notification:
-  - "&c&o%NAME% &7got muted by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  UndoNotification: "&e&o%OPERATOR% &7unmuted &c&o%NAME%"
+    - "<red><italic>%NAME%</italic></red> <gray>got muted by</gray> <yellow><italic>%OPERATOR%</italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+  UndoNotification: "<yellow><italic>%OPERATOR%</italic></yellow> <gray>unmuted</gray> <red><bold>%NAME%</bold></red>"
 
 Tempmute:
-  Usage: "&cUsage &8» &7&o/tempmute (-s) [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
-  MaxDuration: "&cYou are not able to mute more than %MAX%sec"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/tempmute (-s) [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]</italic></gray>"
+  MaxDuration: "<red>You are not able to mute more than %MAX%sec</red>"
   Layout:
-  - '%PREFIX% &7You are muted for %DURATION%'
-  - "&cReason &8» &7%REASON%"
+    - '%PREFIX% <gray>You are muted for %DURATION%</gray>'
+    - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
   Notification:
-  - "&c&o%NAME% &7got muted by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  - "&7&oThis player got muted for &e&o%DURATION%"
+    - "<red><italic>%NAME%</italic></red> <gray>got muted by</gray> <yellow><italic>%OPERATOR%</italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+    - "<italic><gray>This player got muted for <yellow>%DURATION%</yellow></gray></italic>"
 
 Warn:
-  Usage: "&cUsage &8» &7&o/warn (-s) [Name] [Reason/@Layout]"
-  Done: "&c&o%NAME% &7was successfully warned!"
-  Exempt: "&7You are not able to warn &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/warn (-s) [Name] [Reason/@Layout]</italic></gray>"
+  Done: "<red><italic>%NAME%</italic></red> <gray>was successfully warned!</gray>"
+  Exempt: "<gray>You are not able to warn</gray> <red><italic>%NAME%</italic></red>"
   Layout:
-  - '%PREFIX% &cYou received a warning'
-  - "&cReason &8» &7%REASON%"
-  - '&7You have now &c&o%COUNT% &7warning(s) in total!'
+    - '%PREFIX% <red>You received a warning</red>'
+    - "<red>Reason</red> <dark_gray>»</dark_gray> <gray>%REASON%</gray>"
+    - '<gray>You have now <red><italic>%COUNT%</italic></red> warning(s) in total!</gray>'
   Notification:
-  - "&c&o%NAME% &7got warned by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
+    - "<red><italic>%NAME%</italic></red> <gray>got warned by</gray> <yellow><italic>%OPERATOR%</italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
 
 Note:
-  Usage: "&cUsage &8» &7&o/note (-s) [Name] [Reason]"
-  Done: "&c&o%NAME% &7was successfully noted!"
-  Exempt: "&7You are not able to note &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/note (-s) [Name] [Reason]</italic></gray>"
+  Done: "<red><italic>%NAME%</italic></red> <gray>was successfully noted!</gray>"
+  Exempt: "<gray>You are not able to note</gray> <red><italic>%NAME%</italic></red>"
   Notification:
-  - "&c&o%NAME% &7got noted by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
+    - "<red><italic>%NAME%<italic></red> <gray>got noted by</gray> <yellow><italic>%OPERATOR%</italic></yellow>"
+    - "<gray>For the reason</gray> <italic>%REASON%</italic>"
 
 Tempwarn:
-  Usage: "&cUsage &8» &7&o/tempwarn (-s) [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]"
-  MaxDuration: "&cYou are not able to warn more than %MAX%sec"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/tempwarn (-s) [Name] [Xmo/Xd/Xh/Xm/Xs/#TimeLayout] [Reason/@Layout]</italic></gray>"
+  MaxDuration: "<red>You are not able to warn more than %MAX%sec</red>"
   Layout:
-  - '%PREFIX% &cYou received a temp-warning'
-  - "&cReason &8» &7%REASON%"
-  - "&cIt will pass in &8» &7%DURATION%"
-  - '&7You have now &c&o%COUNT% &7warning(s) in total!'
+    - '%PREFIX% <red>You received a temp-warning</red>'
+    - "<red>Reason</red> <dark_gray>»</dark_gray> <gray>%REASON%</gray>"
+    - "<red>It will pass in</red> <dark_gray>»</dark_gray> <yellow>%DURATION%</yellow>"
+    - '<gray>You have now <red><italic>%COUNT%</italic></red> warning(s) in total!</gray>'
   Notification:
-  - "&c&o%NAME% &7got temp-warned by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
-  - "&7This warning will pass in &o%DURATION%"
+    - "<red><italic>%NAME%</italic></red> <gray>got temp-warned by</gray> <yellow><italic>%OPERATOR%</italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
+    - "<gray>This warning will pass in <italic>%DURATION%</italic></gray>"
 
 Kick:
-  Usage: "&cUsage &8» &7&o/kick (-s) [Name] [Reason/@Layout]"
-  Done: "&c&o%NAME% &7was successfully kicked!"
-  NotOnline: "&c&o%NAME% &7is not online!"
-  Exempt: "&7You are not able to kick &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/kick (-s) [Name] [Reason/@Layout]</italic></gray>"
+  Done: "<red><italic>%NAME%</italic></red> <gray>was successfully kicked!</gray>"
+  NotOnline: "<red><italic>%NAME%</italic></red> <gray>is not online!</gray>"
+  Exempt: "<gray>You are not able to kick</gray> <red><italic>%NAME%</italic></red>"
   Layout:
-  - '%PREFIX% &7You got kicked'
-  - '&7'
-  - "&cReason &8» &7%REASON%"
-  - '&7'
+    - '%PREFIX% <gray>You got kicked</gray>'
+    - ''
+    - "<red>Reason</red> <dark_gray>»</dark_gray> <gray>%REASON%</gray>"
+    - ''
   Notification:
-  - "&c&o%NAME% &7got kicked by &e&o%OPERATOR%"
-  - "&7For the reason &o%REASON%"
+    - "<red><italic>%NAME%</italic></red> <gray>got kicked by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
+    - "<gray>For the reason <italic>%REASON%</italic></gray>"
 
 
 UnBan:
-  Usage: "&cUsage &8» &7&o/unban [Name/IP]"
-  NotPunished: "&c&o%NAME% is not banned!"
-  Done: "&a&o%NAME% &7was successfully unbanned!"
-  Notification: "&e&o%OPERATOR% &7unbanned &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/unban [Name/IP]</italic></gray>"
+  NotPunished: "<red><italic>%NAME%</italic> is not banned!</red>"
+  Done: "<green><italic>%NAME%</italic></green> <gray>was successfully unbanned!</gray>"
+  Notification: "<yellow><italic>%OPERATOR%</italic></yellow> <gray>unbanned</gray> <red><italic>%NAME%</italic></red>"
 
 UnMute:
-  Usage: "&cUsage &8» &7&o/unmute [Name]"
-  NotPunished: "&c&o%NAME% is not muted!"
-  Done: "&a&o%NAME% &7was successfully unmuted!"
-  Notification: "&e&o%OPERATOR% &7unmuted &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/unmute [Name]</italic></gray>"
+  NotPunished: "<red><italic>%NAME%</italic> is not muted!</red>"
+  Done: "<green><italic>%NAME%</italic></green> <gray>was successfully unmuted!</gray>"
+  Notification: "<yellow><italic>%OPERATOR%</italic></yellow> <gray>unmuted</gray> <red><italic>%NAME%</italic></red>"
 
 UnWarn:
-  Usage: "&cUsage &8» &7&o/unwarn [ID] or /unwarn clear [Name]"
-  NotFound: "&cCould not find warning #%ID%"
-  Done: "&7Warn &a&o#%ID% &7was successfully deleted!"
-  Notification: "&e&o%OPERATOR% &7unwarned &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/unwarn [ID] or /unwarn clear [Name]</italic></gray>"
+  NotFound: "<red>Could not find warning #%ID%</red>"
+  Done: "<gray>Warn <green><italic>#%ID%</italic></green> was successfully deleted!</gray>"
+  Notification: "<yellow><italic>%OPERATOR%</italic></yellow> <gray>unwarned</gray> <red><italic>%NAME%</italic></red>"
   Clear:
-    Empty: "&c&o%NAME% &7has no warnings!"
-    Done: "&7Cleared &a&o%COUNT% &7warnings"
+    Empty: "<red><italic>%NAME%</italic></red> <gray>has no warnings!</gray>"
+    Done: "<gray>Cleared <green><italic>%COUNT%</italic></green> warnings</gray>"
 
 UnNote:
-  Usage: "&cUsage &8» &7&o/unnote [ID] or /unnote clear [Name]"
-  NotFound: "&cCould not find note #%ID%"
-  Done: "&7Note &a&o#%ID% &7was successfully deleted!"
-  Notification: "&e&o%OPERATOR% &7unnoted &c&o%NAME%"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/unnote [ID] or /unnote clear [Name]</italic></gray>"
+  NotFound: "<red>Could not find note #%ID%</red>"
+  Done: "<gray>Note <green><italic>#%ID%</italic></green> was successfully deleted!</gray>"
+  Notification: "<yellow><italic>%OPERATOR%</italic></yellow> <gray>unnoted</gray> <red><italic>%NAME%</italic></red>"
   Clear:
-    Empty: "&c&o%NAME% &7has no notes!"
-    Done: "&7Cleared &a&o%COUNT% &7notes"
+    Empty: "<red><italic>%NAME%</italic></red> <gray>has no notes!</gray>"
+    Done: "<gray>Cleared <green><italic>%COUNT%</italic></green> notes</gray>"
 
 UnPunish:
-  Usage: "&cUsage &8» &7&o/unpunish [ID]"
-  NotFound: "&cCould not find punishment #%ID%"
-  Done: "&7Punishment &a&o#%ID% &7was successfully deleted!"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/unpunish [ID]</italic></gray>"
+  NotFound: "<red>Could not find punishment #%ID%</red>"
+  Done: "<gray>Punishment <green><italic>#%ID%</italic></green> was successfully deleted!</gray>"
 
 
 Banlist:
-  Usage: "&cUsage &8» &7&o/banlist <Page>"
-  OutOfIndex: "&cThere is no page %PAGE%!"
-  NoEntries: "&c&oThere are no entries"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/banlist (Page)</italic></gray>"
+  OutOfIndex: "<red>There is no page %PAGE%!</red>"
+  NoEntries: "<red><italic>There are no entries</italic></red>"
   Header:
-  - "%PREFIX% &7Banlist:"
-  - "&c&oPlayer/IP &8| &e&oDuration &8| &7&oBanned by"
-  - "&c&oType &8> &7&oReason"
-  - "&7"
+    - "%PREFIX% <gray>Banlist:</gray>"
+    - "<red><italic>Player/IP</italic></red> <dark_gray>|</dark_gray> <yellow><italic>Duration</italic></yellow> <dark_gray>|</dark_gray> <gray><italic>Banned by</italic></gray>"
+    - "<red><italic>Type</italic></red> <dark_gray>></dark_gray> <gray><italic>Reason</italic></gray>"
+    - "&7"
   Entry:
-  - "&8[&e%DATE%&8]"
-  - "&c%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
-  - "&c%TYPE% &8> &7&o%REASON%"
-  - "&7"
-  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Listed bans: &e&o%COUNT%"
-  PageFooter: "&7Use &e&o/banlist %NEXT_PAGE% &7to see the next page"
+    - "<dark_gray>[<yellow>%DATE%</yellow>]</dark_gray>"
+    - "<red>%NAME%</red> <dark_gray>|</dark_gray> <yellow>%DURATION%</yellow> <dark_gray>|</dark_gray> <gray>%OPERATOR%</gray>"
+    - "<red>%TYPE%</red> <dark_gray>|</dark_gray> <gray><italic>%REASON%</italic></gray>"
+    - ""
+  Footer: "<gray>Page <yellow><italic>%CURRENT_PAGE%</italic></yellow> of <yellow><italic>%TOTAL_PAGES%</italic></yellow> <dark_gray>|</dark_gray> Listed bans: <yellow><italic>%COUNT%</italic></yellow></gray>"
+  PageFooter: "<gray>Use <yellow><italic>/banlist %NEXT_PAGE%</italic></yellow> to see the next page</gray>"
 
 History:
-  Usage: "&cUsage &8» &7&o/history [Name/IP] <Page>"
-  OutOfIndex: "&cThere is no page %PAGE%!"
-  NoEntries: "&c&oCould not find the history of %NAME% :("
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/history [Name/IP] (Page)</italic></gray>"
+  OutOfIndex: "<red>There is no page %PAGE%!</red>"
+  NoEntries: "<red><italic>Could not find the history of %NAME%</italic></red>"
   Header:
-  - "%PREFIX% &7History for %NAME%:"
-  - "&c&oName &8| &e&oDuration &8| &7&oOperator"
-  - "&c&oType &8> &7&oReason"
-  - "&7"
+    - "%PREFIX% <gray>History for %NAME%:</gray>"
+    - "<red><italic>Name</italic></red> <dark_gray>|</dark_gray> <yellow><italic>Duration</italic></yellow> <dark_gray>|</dark_gray> <yellow><italic>Operator</italic></yellow>"
+    - "<red><italic>Type</italic></red> <dark_gray>></dark_gray> <gray><italic>Reason</italic></gray>"
+    - ""
   Entry:
-  - "&8[&e%DATE%&8]"
-  - "&c%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
-  - "&c%TYPE% &8> &7&o%REASON%"
-  - "&7"
-  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Total entries: &e&o%COUNT%"
-  PageFooter: "&7Use &e&o/history %NAME% %NEXT_PAGE% &7to see the next page"
+    - "<dark_gray>[<yellow>%DATE%</yellow>]</dark_gray>"
+    - "<red>%NAME%</red> <dark_gray>|</dark_gray> <yellow>%DURATION%</yellow> <dark_gray>|</dark_gray> <gray>%OPERATOR%</gray>"
+    - "<red>%TYPE%</red> <dark_gray>|</dark_gray> <gray><italic>%REASON%</italic></gray>"
+    - ""
+  Footer: "<gray>Page <yellow><italic>%CURRENT_PAGE%</italic></yellow> of <yellow><italic>%TOTAL_PAGES%</italic></yellow> <dark_gray>|</dark_gray> Total entries: <yellow><italic>%COUNT%</italic></yellow></gray>"
+  PageFooter: "<gray>Use <yellow><italic>/history %NAME% %NEXT_PAGE%</italic></yellow> to see the next page</gray>"
 
 Warns:
-  Usage: "&cUsage &8» &7&o/warns [Name] <Page> &cor &7&o/warns <Page>"
-  OutOfIndex: "&cThere is no page %PAGE%!"
-  NoEntries: "&c&o%NAME% has no warnings yet"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/warns [Name] (Page) <red>or</red> /warns (Page)</italic></gray>"
+  OutOfIndex: "<red>There is no page %PAGE%!</red>"
+  NoEntries: "<red><italic>%NAME% has no warnings yet</italic></red>"
   Header:
-  - "%PREFIX% &7Warnings for %NAME%:"
-  - "&c&oName &8| &e&oDuration &8| &7&oWarned by"
-  - "&c&o#ID &8> &7&oReason"
-  - "&7"
+    - "%PREFIX% <gray>Warnings for %NAME%:</gray>"
+    - "<red><italic>Name</italic></red> <dark_gray>|</dark_gray> <yellow><italic>Duration</italic></yellow> <dark_gray>|</dark_gray> <yellow><italic>Operator</italic></yellow>"
+    - "<red><italic>#ID</italic></red> <dark_gray>></dark_gray> <gray><italic>Reason</italic></gray>"
+    - ""
   Entry:
-  - "&8[&e%DATE%&8]"
-  - "&c%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
-  - "&c&l#%ID% &8> &7&o%REASON%"
-  - "&7"
-  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Active warnings: &e&o%COUNT%"
-  PageFooter: "&7Use &e&o/warns %NAME% %NEXT_PAGE% &7to see the next page"
+    - "<dark_gray>[<yellow>%DATE%</yellow>]</dark_gray>"
+    - "<red>%NAME%</red> <dark_gray>|</dark_gray> <yellow>%DURATION%</yellow> <dark_gray>|</dark_gray> <gray>%OPERATOR%</gray>"
+    - "<red><bold>#%ID%</bold></red> <dark_gray>></dark_gray> <gray><italic>%REASON%</italic></gray>"
+    - ""
+  Footer: "<gray>Page <yellow><italic>%CURRENT_PAGE%</italic></yellow> of <yellow><italic>%TOTAL_PAGES%</italic></yellow> <dark_gray>|</dark_gray> Active warnings: <yellow><italic>%COUNT%</italic></yellow></gray>"
+  PageFooter: "<gray>Use <yellow><italic>/warns %NAME% %NEXT_PAGE%</italic></yellow> to see the next page</gray>"
 
 WarnsOwn:
-  OutOfIndex: "&cThere is no page %PAGE%!"
-  NoEntries: "&c&oYou have no warnings yet"
+  OutOfIndex: "<red>There is no page %PAGE%!</red>"
+  NoEntries: "<red><italic>You has no warnings yet</italic></red>"
   Header:
-    - "%PREFIX% &7Your warnings:"
-    - "&e&oDuration &8| &7&oWarned by"
-    - "&c&o#ID &8> &7&oReason"
-    - "&7"
+    - "%PREFIX% <gray>Your warnings:</gray>"
+    - "<yellow><italic>Duration</italic></yellow> <dark_gray>|</dark_gray> <gray><italic>Warned by</italic></gray>"
+    - "<red><italic>#ID</italic></red> <dark_gray>></dark_gray> <gray><italic>Reason</italic></gray>"
+    - ""
   Entry:
-    - "&8[&e%DATE%&8]"
-    - "&e%DURATION% &8| &7%OPERATOR%"
-    - "&c&l#%ID% &8> &7&o%REASON%"
-    - "&7"
-  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Active warnings: &e&o%COUNT%"
-  PageFooter: "&7Use &e&o/warns %NEXT_PAGE% &7to see the next page"
+    - "<dark_gray>[<yellow>%DATE%</yellow>]</dark_gray>"
+    - "<red>%NAME%</red> <dark_gray>|</dark_gray> <yellow>%DURATION%</yellow> <dark_gray>|</dark_gray> <gray>%OPERATOR%</gray>"
+    - "<red><bold>#%ID%</bold></red> <dark_gray>></dark_gray> <gray><italic>%REASON%</italic></gray>"
+    - ""
+  Footer: "<gray>Page <yellow><italic>%CURRENT_PAGE%</italic></yellow> of <yellow><italic>%TOTAL_PAGES%</italic></yellow> <dark_gray>|</dark_gray> Active warnings: <yellow><italic>%COUNT%</italic></yellow></gray>"
+  PageFooter: "<gray>Use <yellow><italic>/warns %NEXT_PAGE%</italic></yellow> to see the next page</gray>"
   
 Notes:
-  Usage: "&cUsage &8» &7&o/notes [Name] <Page> &cor &7&o/notes <Page>"
-  OutOfIndex: "&cThere is no page %PAGE%!"
-  NoEntries: "&c&o%NAME% has no notes yet"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/notes [Name] (Page) <red>or</red> /notes (Page)</italic></gray>"
+  OutOfIndex: "<red>There is no page %PAGE%!</red>"
+  NoEntries: "<red><italic>%NAME% has no notes yet</italic></red>"
   Header:
-    - "&7"
-    - "%PREFIX% &7Notes for %NAME%:"
-    - "&7"
+    - ""
+    - "%PREFIX% <gray>Notes for %NAME%:</gray>"
+    - ""
   Entry:
-    - "&7%DATE% &8| &7By &o%OPERATOR% &7(&c#%ID%&7)"
-    - "&8> &e%REASON%"
-    - "&7"
-  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Notes: &e&o%COUNT%"
-  PageFooter: "&7Use &e&o/notes %NAME% %NEXT_PAGE% &7to see the next page"
+    - "<gray>%DATE% <dark_gray>|</dark_gray> By <italic>%OPERATOR%</italic> (<red>#%ID%</red>)</gray>"
+    - "<dark_gray>></dark_gray> <yellow>%REASON%</yellow>"
+    - ""
+  Footer: "<gray>Page <yellow><italic>%CURRENT_PAGE%</italic></yellow> of <yellow><italic>%TOTAL_PAGES%</italic></yellow> <dark_gray>|</dark_gray> Notes: <yellow><italic>%COUNT%</italic></yellow></gray>"
+  PageFooter: "<gray>Use <yellow><italic>/notes %NAME% %NEXT_PAGE%</italic></yellow> to see the next page</gray>"
 
 NotesOwn:
-  OutOfIndex: "&cThere is no page %PAGE%!"
-  NoEntries: "&c&oYou have no notes yet"
+  OutOfIndex: "<red>There is no page %PAGE%!</red>"
+  NoEntries: "<red><italic>You has no notes yet</italic></red>"
   Header:
-    - "&7"
-    - "%PREFIX% &7Your notes:"
-    - "&7"
+    - ""
+    - "%PREFIX% <gray>Your notes:</gray>"
+    - ""
   Entry:
-    - "&7%DATE% &8| &7By &o%OPERATOR% &7(&c#%ID%&7)"
-    - "&8> &e%REASON%"
-    - "&7"
-  Footer: "&7Page &e&o%CURRENT_PAGE% &7of &e&o%TOTAL_PAGES% &8| &7Notes: &e&o%COUNT%"
-  PageFooter: "&7Use &e&o/notes %NEXT_PAGE% &7to see the next page"
+    - "<gray>%DATE% <dark_gray>|</dark-gray> By <italic>%OPERATOR%</italic> (<red>#%ID%</red>)</gray>"
+    - "<dark_gray>></dark_gray> <yellow>%REASON%</yellow>"
+    - ""
+  Footer: "<gray>Page <yellow><italic>%CURRENT_PAGE%</italic></yellow> of <yellow><italic>%TOTAL_PAGES%</italic></yellow> <dark_gray>|</dark_gray> Notes: <yellow><italic>%COUNT%</italic></yellow></gray>"
+  PageFooter: "<gray>Use <yellow><italic>/notes %NEXT_PAGE%</italic></yellow> to see the next page</gray>"
 
 ChangeReason:
-  Usage: "&cUsage &8» &7&o/change-reason [ID or ban/mute USER] [New reason]"
-  Done: "&7Punishment &a&o#%ID% &7has successfully been updated!"
-  NotFound: "&cSorry we have not been able to find this punishment"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/change-reason [ID or ban/mute USER] [New reason]</italic></gray>"
+  Done: "<gray>Punishment <green><italic>#%ID%</italic></green> has successfully been updated!</gray>"
+  NotFound: "<red>Sorry we have not been able to find this punishment</red>"
 
 Check:
-  Usage: "&cUsage &8» &7&o/check [Name]"
-  Header: "&7Checking &e&o%NAME% &8(%CACHED%&8)"
-  UUID: "&cUUID &8» &7%UUID% &8(%CACHED%&8)"
-  IP: "&cIP &8» &7%IP% &8(%CACHED%&8)"
-  Geo: "&cCountry &8» &7%LOCATION%"
-  Mute: "&cMuted &8» &7%DURATION%"
-  MuteReason: "  &cReason &8» &7%REASON%"
-  Ban: "&cBanned &8» &7%DURATION%"
-  BanReason: "  &cReason &8» &7%REASON%"
-  Warn: "&cWarns &8» &7%COUNT%"
-  Note: "&cNotes &8» &7%COUNT%"
-  NotFound: "&cSorry we have not been able to find %NAME%"
-  Cached: "&a&ocached"
-  NotCached: "&c&onot cached"
+  Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/check [Name]</italic></gray>"
+  Header: "<gray>Checking <yellow><italic>%NAME%</italic></yellow> <dark_gray>(%CACHED%)</dark_gray></gray>"
+  UUID: "<red>UUID</red> <dark_gray>»</dark_gray> <gray>%UUID% <dark_gray>(%CACHED%)</dark_gray></gray>"
+  IP: "<red>IP</red> <dark_gray>»</dark_gray> <gray>%IP% <dark_gray>(%CACHED%)</dark_gray></gray>"
+  Geo: "<red>Country</red> <dark_gray>»</dark_gray> <gray>%LOCATION%</gray>"
+  Mute: "<red>Muted</red> <dark_gray>»</dark_gray> <gray>%DURATION%</gray>"
+  MuteReason: "  <red>Reason</red> <dark_gray>»</dark_gray> <gray>%REASON%</gray>"
+  Ban: "<red>Banned</red> <dark_gray>»</dark_gray> <gray>%DURATION%</gray>"
+  BanReason: "  <red>Reason</red> <dark_gray>»</dark_gray> <gray>%REASON%</gray>"
+  Warn: "<red>Warns</red> <dark_gray>»</dark_gray> <gray>%COUNT%</gray>"
+  Note: "<red>Notes</red> <dark_gray>»</dark_gray> <gray>%COUNT%</gray>"
+  NotFound: "<red>Sorry we have not been able to find %NAME%"
+  Cached: "<green><italic>cached<italic></green>"
+  NotCached: "<red><italic>not cached</italic></red>"

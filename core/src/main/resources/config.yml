@@ -1,8 +1,7 @@
-# AdvancedBan v2 - Coded by Leoko
+# AdvancedBan v3 - Coded by Leoko, Update & Maintained by 2vY (hlpdev)
 # For each setting, there is a small description.
 # Please read each description carefully before changing anything.
 # For more information visit: https://www.spigotmc.org/resources/advancedban.8695/
-# Do you want your own Plugin or Website? Check out our Dev-Page: http://dev.skamps.eu
 
 # If set to false all bans will be saved locally in a HSQLDB-Database
 UseMySQL: false
@@ -25,7 +24,8 @@ DetailedDisableMessage: true
 LockdownOnError: true
 
 # This will be the default reason to be displayed if none is given
-DefaultReason: "none"
+# !! You may use normal color codes or MiniMessage formatting (https://docs.advntr.dev/minimessage/format.html)
+DefaultReason: "No reason provided."
 
 # Change this if your server has a different time that your users.
 # e.g.: ServerTime: 16:43 | Your Time: 13:43 | TimeDiff has to be set to -3
@@ -72,7 +72,7 @@ ExemptPlayers:
 - 'ItzSomebody'
 
 # The date-format which will be used for the %DATE% variable
-DateFormat: "dd.MM.yyyy-HH:mm"
+DateFormat: "MM/dd/yyyy HH:mm"
 
 # This is useful for bungeecord servers or server with permission systems which do not support *-Perms
 # So if you enable this you can use ab.all instead of ab.* or ab.ban.all instead of ab.ban.*
@@ -96,13 +96,14 @@ UUID-Fetcher:
     URL: "https://api.mojang.com/users/profiles/minecraft/%NAME%?at=%TIMESTAMP%"
     Key: "id"
   BackUp-API:
-    URL: "https://us.mc-api.net/v3/uuid/%NAME%"
-    Key: "uuid"
+    URL: "https://api.minetools.eu/uuid/%NAME%"
+    Key: "id"
 
 # These are the commands that will be performed on warns
 # If you skip a number the command from before will be performed
 # You can also use non-AdvancedBan-Commands like 'broadcast' or 'clear %PLAYER%
 # Variables: %PLAYER%, %REASON%, %COUNT%
+# !! You may use normal color codes or MiniMessage formatting (https://docs.advntr.dev/minimessage/format.html)
 WarnActions:
   3: "kick %PLAYER% &c&oYou have received your 3rd warning!"
   4: "tempban %PLAYER% 30m &c&oYou have received your 4th warning!"
