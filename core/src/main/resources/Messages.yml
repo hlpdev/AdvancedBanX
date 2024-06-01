@@ -2,7 +2,7 @@
 # Normal Color Codes along with MiniMessage (https://docs.advntr.dev/minimessage/format.html) are available in all strings
 
 General:
-  Prefix: "<red><bold>AdvancedBanX</red> <dark_gray>»</dark_gray></bold>"
+  Prefix: "<bold><red>AdvancedBanX</red> <dark_gray>»</dark_gray></bold>"
   NoPerms: "<red>You don't have perms for that!</red>"
   LayoutNotFound: "<red>There is no layout called %NAME%</red>"
   # This will be the replacement for the %DURATION% variable
