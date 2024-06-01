@@ -23,10 +23,6 @@ the moment, AdvancedBanX supports Bukkit (as well as spigot/paper) and
 Bungeecord. It also supports MySQL and Local File saving as it's storage 
 platform.
 
-# Differences from the Original
-* Added 1.20 Support
-* Added MiniMessage support to all strings in layouts.yml & messages.yml
-
 ## Goals
 * Sponge Support
 * Velocity Support
