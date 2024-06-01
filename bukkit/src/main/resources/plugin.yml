@@ -1,7 +1,8 @@
-name: AdvancedBan
+name: AdvancedBanX
 version: ${project.version}
 main: ${project.groupId}.bukkit.BukkitMain
-author: Leoko
+authors: ["Leoko", "2vY"]
+prefix: AdvancedBanX
 softdepend: [Vault]
 api-version: 1.13
 

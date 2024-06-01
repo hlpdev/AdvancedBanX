@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>me.leoko.advancedban</groupId>
-        <artifactId>AdvancedBan</artifactId>
-        <version>2.3.0</version>
+        <groupId>net.hnt8.advancedban</groupId>
+        <artifactId>AdvancedBanX</artifactId>
+        <version>3.0.0</version>
     </parent>
 
-    <artifactId>AdvancedBan-Bungee</artifactId>
+    <artifactId>AdvancedBanX-Bungee</artifactId>
     <packaging>jar</packaging>
 
     <repositories>
@@ -92,16 +92,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.bstats</groupId>
-            <artifactId>bstats-bungeecord</artifactId>
-            <version>1.5</version>
+            <groupId>net.hnt8.advancedban</groupId>
+            <artifactId>AdvancedBanX-Core</artifactId>
+            <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
-            <groupId>me.leoko.advancedban</groupId>
-            <artifactId>AdvancedBan-Core</artifactId>
-            <version>${project.version}</version>
+            <groupId>net.hnt8.advancedban</groupId>
+            <artifactId>AdvancedBanX-Core</artifactId>
+            <version>3.0.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

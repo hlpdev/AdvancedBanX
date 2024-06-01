@@ -5,24 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>me.leoko.advancedban</groupId>
-        <artifactId>AdvancedBan</artifactId>
-        <version>2.3.0</version>
+        <groupId>net.hnt8.advancedban</groupId>
+        <artifactId>AdvancedBanX</artifactId>
+        <version>3.0.0</version>
     </parent>
 
-    <artifactId>AdvancedBan-Bundle</artifactId>
+    <artifactId>AdvancedBanX-Bundle</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>me.leoko.advancedban</groupId>
-            <artifactId>AdvancedBan-Bukkit</artifactId>
+            <groupId>net.hnt8.advancedban</groupId>
+            <artifactId>AdvancedBanX-Bukkit</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>me.leoko.advancedban</groupId>
-            <artifactId>AdvancedBan-Bungee</artifactId>
+            <groupId>net.hnt8.advancedban</groupId>
+            <artifactId>AdvancedBanX-Bungee</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
@@ -35,6 +35,7 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.3</version>
                 <configuration>
+                    <finalName>${artifactId}-${version}</finalName>
                     <relocations>
                     	<relocation>
                     		<pattern>org.apache.commons</pattern>
