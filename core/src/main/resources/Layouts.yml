@@ -1,5 +1,6 @@
 # AdvancedBan v3 - Coded by Leoko, Update & Maintained by 2vY (hlpdev)
-# Normal Color Codes along with MiniMessage (https://docs.advntr.dev/minimessage/format.html) are available in all strings
+# MiniMessage Formatting (https://docs.advntr.dev/minimessage/format.html) are available in all strings
+# Regular ampersand color codes cannot be used.
 
 # The default layouts are in the Message.yml file!
 
@@ -17,21 +18,21 @@
 # Example usage: /ban Leoko @ExampleLayout
 Message:
   ExampleLayout:
-    - '%PREFIX% &7Banned for Hacking'
-    - '&c&oBanned by %OPERATOR%'
-    - '&7'
-    - "&cIt seems like you are using a"
-    - "&chacked client please disable it!"
-    - "&cUnban in &8» &7%DURATION%"
-    - '&7'
-    - '&8Unban application in TS or forum'
-    - "&eTS-Ip &8» &c&ncoming soon"
-    - "&eForum &8» &c&ncoming soon"
+    - '%PREFIX% <gray>Banned for Hacking</gray>'
+    - '<red><italic>Banned by %OPERATOR%</italic></red>'
+    - ''
+    - "<red>It seems like you are using a</red>"
+    - "<red>hacked client please disable it!</red>"
+    - "<red>Unban in <dark_gray>»</dark_gray> <gray>%DURATION%</gray></red>"
+    - ''
+    - '<dark_gray>Unban application in TS or forum</dark_gray>'
+    - "<yellow>TS-Ip</yellow> <dark_gray>»</dark_gray> <red><underline>coming soon</underline></red>"
+    - "<yellow>Forum</yellow> <dark_gray>»</dark_gray> <red><underline>coming soon</underline></red>"
   ExampleLayout2:
-    - '%PREFIX% &7Banned for offensive language'
-    - '&7'
-    - "&cWe don't tolerate swearing on our server!"
-    - "&cYou got banned for the word '%REASON%'" # You can even use reasons in message layouts
+    - '%PREFIX% <gray>Banned for offensive language</gray>'
+    - ''
+    - "<red>We don't tolerate swearing on our server!</red>"
+    - "<red>You got banned for the word '%REASON%'</red>" # You can even use reasons in message layouts
 
 # You would use this time-layout for example like this: "/tempban Leoko #ExampleLayout Hacking in FFA"
 # Or with "/tempwarn Leoko #ExampleLayout Advertising" or even "/tempwarn Leoko #ExampleLayout No capslock please"
