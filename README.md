@@ -5,7 +5,6 @@ Check out our [Spigot-Page](https://www.spigotmc.org/resources/advancedban.8695/
 
 ![Minecraft Version 1.7-1.20](https://img.shields.io/badge/supports%20minecraft%20versions-1.7--1.20-brightgreen.svg)
 ![license GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-lightgrey.svg)
-[![CircleCI](https://circleci.com/gh/DevLeoko/AdvancedBan.svg?style=svg)](https://circleci.com/gh/DevLeoko/AdvancedBan)
 
 _Coded by Leoko_ 
 <br>
@@ -23,6 +22,10 @@ also a detailed main configuration file with a lot of useful settings. At
 the moment, AdvancedBanX supports Bukkit (as well as spigot/paper) and 
 Bungeecord. It also supports MySQL and Local File saving as it's storage 
 platform.
+
+# Differences from the Original
+* Added 1.20 Support
+* Added MiniMessage support to all strings in layouts.yml & messages.yml
 
 ## Goals
 * Sponge Support
