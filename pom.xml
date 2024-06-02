@@ -6,7 +6,7 @@
     
     <groupId>net.hnt8.advancedban</groupId>
     <artifactId>AdvancedBanX</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
     <packaging>pom</packaging>
 
     <modules>
