@@ -422,7 +422,7 @@ public enum Command {
                 MethodInterface mi = Universal.get().getMethods();
                 Calendar calendar = new GregorianCalendar();
                 Object sender = input.getSender();
-                mi.sendMessage(sender, "§c§lAdvancedBan v2 §cSystemPrefs");
+                mi.sendMessage(sender, "§c§lAdvancedBanX v3 §cSystemPrefs");
                 mi.sendMessage(sender, "§cServer-Time §8» §7" + calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
                 mi.sendMessage(sender, "§cYour UUID (Intern) §8» §7" + mi.getInternUUID(sender));
                 if (input.hasNext()) {
@@ -444,7 +444,7 @@ public enum Command {
                     if (input.getPrimaryData().equals("reload")) {
                         if (Universal.get().hasPerms(sender, "ab.reload")) {
                             mi.loadFiles();
-                            mi.sendMessage(sender, "§a§lAdvancedBan §8§l» §7Reloaded!");
+                            mi.sendMessage(sender, "§a§lAdvancedBanX §8§l» §7Reloaded!");
                         } else {
                             MessageManager.sendMessage(sender, "General.NoPerms", true);
                         }
@@ -452,7 +452,7 @@ public enum Command {
                     } else if (input.getPrimaryData().equals("help")) {
                         if (Universal.get().hasPerms(sender, "ab.help")) {
                             mi.sendMessage(sender, "§8");
-                            mi.sendMessage(sender, "§c§lAdvancedBan §7Command-Help");
+                            mi.sendMessage(sender, "§c§lAdvancedBanX §7Command-Help");
                             mi.sendMessage(sender, "§8");
                             mi.sendMessage(sender, "§c/ban [Name] [Reason/@Layout]");
                             mi.sendMessage(sender, "§8» §7Ban a user permanently");
@@ -505,8 +505,9 @@ public enum Command {
                 }
 
 
-                mi.sendMessage(sender, "§8§l§m-=====§r §c§lAdvancedBan v2 §8§l§m=====-§r ");
+                mi.sendMessage(sender, "§8§l§m-=====§r §c§lAdvancedBanX v3 §8§l§m=====-§r ");
                 mi.sendMessage(sender, "  §cDev §8• §7Leoko");
+                mi.sendMessage(sender, "  §cMaintainer §8• §72vY (hlpdev)");
                 mi.sendMessage(sender, "  §cStatus §8• §a§oStable");
                 mi.sendMessage(sender, "  §cVersion §8• §7" + mi.getVersion());
                 mi.sendMessage(sender, "  §cLicense §8• §7Public");
@@ -590,7 +591,7 @@ public enum Command {
     }
 
     public static class CommandInput {
-        private Object sender;
+        private final Object sender;
         private String[] args;
 
         CommandInput(Object sender, String[] args) {
