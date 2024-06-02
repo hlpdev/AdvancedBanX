@@ -51,7 +51,7 @@ public class DatabaseManager {
         try {
             dataSource = new DynamicDataSource(useMySQL).generateDataSource();
         } catch (ClassNotFoundException ex) {
-            Universal.get().log("§cERROR: Failed to configure data source!");
+            Universal.get().log("ERROR: Failed to configure data source!");
             Universal.get().debug(ex.getMessage());
             return;
         }

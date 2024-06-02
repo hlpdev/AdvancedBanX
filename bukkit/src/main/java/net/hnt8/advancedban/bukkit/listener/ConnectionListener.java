@@ -27,7 +27,7 @@ public class ConnectionListener implements Listener {
             if (result != null) {
                 MiniMessage miniMessage = MiniMessage.miniMessage();
                 LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
-                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
+                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result.replace('§', '&'))));
                 
                 event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_BANNED, result);
             }

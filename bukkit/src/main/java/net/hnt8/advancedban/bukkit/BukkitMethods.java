@@ -177,7 +177,7 @@ public class BukkitMethods implements MethodInterface {
 
     @Override
     public void sendMessage(Object player, String msg) {
-        String result = msg;
+        String result = msg.replace('§', '&');
         MiniMessage miniMessage = MiniMessage.miniMessage();
         LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
         result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
@@ -213,7 +213,7 @@ public class BukkitMethods implements MethodInterface {
     @Override
     public void kickPlayer(String player, String reason) {
         if (getPlayer(player) != null && getPlayer(player).isOnline()) {
-            String result = reason;
+            String result = reason.replace('§', '&');
             MiniMessage miniMessage = MiniMessage.miniMessage();
             LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
             result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
