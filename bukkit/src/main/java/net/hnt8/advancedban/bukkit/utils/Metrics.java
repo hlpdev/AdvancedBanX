@@ -12,7 +12,7 @@
  *
  * Violations will result in a ban of your plugin and account from bStats.
  */
-package net.hnt8.advancedban.bukkit.util;
+package net.hnt8.advancedban.bukkit.utils;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;

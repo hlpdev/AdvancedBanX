@@ -4,6 +4,8 @@ import net.hnt8.advancedban.Universal;
 import net.hnt8.advancedban.bukkit.BukkitMain;
 import net.hnt8.advancedban.manager.PunishmentManager;
 import net.hnt8.advancedban.manager.UUIDManager;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -22,6 +24,10 @@ public class ConnectionListener implements Listener {
             UUIDManager.get().supplyInternUUID(event.getName(), event.getUniqueId());
             String result = Universal.get().callConnection(event.getName(), event.getAddress().getHostAddress());
             if (result != null) {
+                MiniMessage miniMessage = MiniMessage.miniMessage();
+                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+                result = serializer.serialize(miniMessage.deserialize(result));
+                
                 event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_BANNED, result);
             }
         }
@@ -31,23 +37,5 @@ public class ConnectionListener implements Listener {
     public void onDisconnect(PlayerQuitEvent event){
         PunishmentManager.get().discard(event.getPlayer().getName());
     }
-
-    @EventHandler
-    public void onJoin(final PlayerJoinEvent event) {
-        Universal.get().getMethods().scheduleAsync(() -> {
-            if (event.getPlayer().getName().equalsIgnoreCase("Leoko")) {
-                Bukkit.getScheduler().runTaskLaterAsynchronously(BukkitMain.get(), () -> {
-                    if (Universal.get().broadcastLeoko()) {
-                        Bukkit.broadcastMessage("");
-                        Bukkit.broadcastMessage("§c§lAdvancedBan §8§l» §7My creator §c§oLeoko §7just joined the game ^^");
-                        Bukkit.broadcastMessage("");
-                    } else {
-                        event.getPlayer().sendMessage("§c§lAdvancedBan v2 §8§l» §cHey Leoko we are using your Plugin (NO-BC)");
-                    }
-                }, 20);
-            }
-        }, 20);
-    }
-
 
 }

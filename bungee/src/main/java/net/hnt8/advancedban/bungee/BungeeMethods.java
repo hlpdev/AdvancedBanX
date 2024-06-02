@@ -19,6 +19,8 @@ import net.hnt8.advancedban.manager.UUIDManager;
 import net.hnt8.advancedban.utils.Permissionable;
 import net.hnt8.advancedban.utils.Punishment;
 import net.hnt8.advancedban.utils.tabcompletion.TabCompleter;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.ProxyServer;
@@ -60,15 +62,15 @@ public class BungeeMethods implements MethodInterface {
         if (ProxyServer.getInstance().getPluginManager().getPlugin("LuckPerms") != null) {
             permissionableGenerator = LuckPermsOfflineUser::new;
 
-            log("[AdvancedBan] Offline permission support through LuckPerms active");
+            log("[AdvancedBanX] Offline permission support through LuckPerms active");
         } else if (ProxyServer.getInstance().getPluginManager().getPlugin("CloudNet-CloudPerms") != null) {
             permissionableGenerator = CloudNetCloudPermsOfflineUser::new;
 
-            log("[AdvancedBan] Offline permission support through CloudNet-CloudPerms active");
+            log("[AdvancedBanX] Offline permission support through CloudNet-CloudPerms active");
         } else {
             permissionableGenerator = null;
 
-            log("[AdvancedBan] No offline permission support through LuckPerms or CloudNet-CloudPerms");
+            log("[AdvancedBanX] No offline permission support through LuckPerms or CloudNet-CloudPerms");
         }
     }
 
@@ -185,7 +187,11 @@ public class BungeeMethods implements MethodInterface {
     @SuppressWarnings("deprecation")
     @Override
     public void sendMessage(Object player, String msg) {
-        ((CommandSender) player).sendMessage(msg);
+        String result = msg;
+        MiniMessage miniMessage = MiniMessage.miniMessage();
+        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+        result = serializer.serialize(miniMessage.deserialize(result));
+        ((CommandSender) player).sendMessage(result);
     }
 
     @Override
@@ -226,12 +232,16 @@ public class BungeeMethods implements MethodInterface {
 
     @Override
     public void kickPlayer(String player, String reason) {
+        String result = reason;
+        MiniMessage miniMessage = MiniMessage.miniMessage();
+        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+        result = serializer.serialize(miniMessage.deserialize(result));
         if(BungeeMain.getCloudSupport() != null){
-            BungeeMain.getCloudSupport().kick(getPlayer(player).getUniqueId(), reason);
+            BungeeMain.getCloudSupport().kick(getPlayer(player).getUniqueId(), result);
         }else if (Universal.isRedis()) {
-            RedisBungee.getApi().sendChannelMessage("advancedban:main", "kick " + player + " " + reason);
+            RedisBungee.getApi().sendChannelMessage("advancedban:main", "kick " + player + " " + result);
         } else {
-            getPlayer(player).disconnect(TextComponent.fromLegacyText(reason));
+            getPlayer(player).disconnect(TextComponent.fromLegacyText(result));
         }
     }
 

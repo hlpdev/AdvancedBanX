@@ -3,6 +3,8 @@ package net.hnt8.advancedban.bungee.listener;
 import com.imaginarycode.minecraft.redisbungee.events.PubSubMessageEvent;
 import net.hnt8.advancedban.MethodInterface;
 import net.hnt8.advancedban.Universal;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Listener;
@@ -20,7 +22,13 @@ public class PubSubMessageListener implements Listener {
 	@EventHandler
     public void onMessageReceive(PubSubMessageEvent e) {
         if (e.getChannel().equals("advancedban:main")) {
-            String[] msg = e.getMessage().split(" ");
+            String result = e.getMessage();
+            MiniMessage miniMessage = MiniMessage.miniMessage();
+            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+            result = serializer.serialize(miniMessage.deserialize(result));
+
+            String[] msg = result.split(" ");
+            
             if (e.getMessage().startsWith("kick ")) {
                 if (ProxyServer.getInstance().getPlayer(msg[1]) != null) {
                     ProxyServer.getInstance().getPlayer(msg[1]).disconnect(e.getMessage().substring((msg[0] + msg[1]).length() + 2));

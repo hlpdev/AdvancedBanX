@@ -5,6 +5,8 @@ import net.hnt8.advancedban.bukkit.listener.ChatListener;
 import net.hnt8.advancedban.bukkit.listener.CommandListener;
 import net.hnt8.advancedban.bukkit.listener.ConnectionListener;
 import net.hnt8.advancedban.bukkit.listener.InternalListener;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -31,7 +33,12 @@ public class BukkitMain extends JavaPlugin {
             AsyncPlayerPreLoginEvent apple = new AsyncPlayerPreLoginEvent(player.getName(), player.getAddress().getAddress(), player.getUniqueId());
             connListener.onConnect(apple);
             if (apple.getLoginResult() == AsyncPlayerPreLoginEvent.Result.KICK_BANNED) {
-                player.kickPlayer(apple.getKickMessage());
+                String result = apple.getKickMessage();
+                MiniMessage miniMessage = MiniMessage.miniMessage();
+                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+                result = serializer.serialize(miniMessage.deserialize(result));
+                
+                player.kickPlayer(result);
             }
         });
 

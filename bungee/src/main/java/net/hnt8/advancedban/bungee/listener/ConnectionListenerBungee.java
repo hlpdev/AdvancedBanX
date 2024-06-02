@@ -5,6 +5,8 @@ import net.hnt8.advancedban.Universal;
 import net.hnt8.advancedban.bungee.BungeeMain;
 import net.hnt8.advancedban.manager.PunishmentManager;
 import net.hnt8.advancedban.manager.UUIDManager;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.event.LoginEvent;
 import net.md_5.bungee.api.event.PlayerDisconnectEvent;
@@ -30,6 +32,10 @@ public class ConnectionListenerBungee implements Listener {
             String result = Universal.get().callConnection(event.getConnection().getName(), event.getConnection().getAddress().getAddress().getHostAddress());
 
             if (result != null) {
+                MiniMessage miniMessage = MiniMessage.miniMessage();
+                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+                result = serializer.serialize(miniMessage.deserialize(result));
+                
                 if(BungeeMain.getCloudSupport() != null){
                     BungeeMain.getCloudSupport().kick(event.getConnection().getUniqueId(), result);
                 }else {
@@ -52,21 +58,5 @@ public class ConnectionListenerBungee implements Listener {
                 PunishmentManager.get().discard(event.getPlayer().getName());
             }
         });
-    }
-
-    @SuppressWarnings("deprecation")
-	@EventHandler
-    public void onLogin(final PostLoginEvent event) {
-        Universal.get().getMethods().scheduleAsync(() -> {
-            if (event.getPlayer().getName().equalsIgnoreCase("Leoko")) {
-                if (Universal.get().broadcastLeoko()) {
-                    ProxyServer.getInstance().broadcast("");
-                    ProxyServer.getInstance().broadcast("§c§lAdvancedBan §8§l» §7My creator §c§oLeoko §7just joined the game ^^");
-                    ProxyServer.getInstance().broadcast("");
-                } else {
-                    event.getPlayer().sendMessage("§c§lAdvancedBan v2 §8§l» §cHey Leoko we are using your Plugin (NO-BC)");
-                }
-            }
-        }, 20);
     }
 }

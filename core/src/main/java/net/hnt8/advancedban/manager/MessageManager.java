@@ -2,9 +2,6 @@ package net.hnt8.advancedban.manager;
 
 import net.hnt8.advancedban.MethodInterface;
 import net.hnt8.advancedban.Universal;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.minimessage.MiniMessage;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,13 +37,6 @@ public class MessageManager {
                     + "\n  - Delete the message file and restart the server");
         } else {
             String preTranslated = replace(str, parameters);
-            
-            MiniMessage miniMessage = MiniMessage.miniMessage();
-            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
-            
-            Component component = miniMessage.deserialize(preTranslated);
-            preTranslated = serializer.serialize(component);
-            
             str = preTranslated.replace('&', '§');
         }
         return str;
@@ -87,12 +77,6 @@ public class MessageManager {
             List<String> list = new ArrayList<>();
             for (String str : mi.getStringList(file, path)) {
                 String preTranslated = replace(str, parameters);
-
-                MiniMessage miniMessage = MiniMessage.miniMessage();
-                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
-
-                Component component = miniMessage.deserialize(preTranslated);
-                preTranslated = serializer.serialize(component);
                 
                 list.add(preTranslated.replace('&', '§'));
             }

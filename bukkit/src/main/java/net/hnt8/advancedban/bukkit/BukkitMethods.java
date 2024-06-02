@@ -5,13 +5,15 @@ import net.hnt8.advancedban.Universal;
 import net.hnt8.advancedban.bukkit.event.PunishmentEvent;
 import net.hnt8.advancedban.bukkit.event.RevokePunishmentEvent;
 import net.hnt8.advancedban.bukkit.listener.CommandReceiver;
-import net.hnt8.advancedban.bukkit.util.Metrics;
+import net.hnt8.advancedban.bukkit.utils.Metrics;
 import net.hnt8.advancedban.manager.DatabaseManager;
 import net.hnt8.advancedban.manager.PunishmentManager;
 import net.hnt8.advancedban.manager.UUIDManager;
 import net.hnt8.advancedban.utils.Permissionable;
 import net.hnt8.advancedban.utils.Punishment;
 import net.hnt8.advancedban.utils.tabcompletion.TabCompleter;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -43,7 +45,7 @@ public class BukkitMethods implements MethodInterface {
     private final File layoutFile = new File(getDataFolder(), "Layouts.yml");
     private final File mysqlFile = new File(getDataFolder(), "MySQL.yml");
     private YamlConfiguration config;
-    private File configFile = new File(getDataFolder(), "config.yml");
+    private final File configFile = new File(getDataFolder(), "config.yml");
     private YamlConfiguration messages;
     private YamlConfiguration layouts;
     private YamlConfiguration mysql;
@@ -175,7 +177,12 @@ public class BukkitMethods implements MethodInterface {
 
     @Override
     public void sendMessage(Object player, String msg) {
-        ((CommandSender) player).sendMessage(msg);
+        String result = msg;
+        MiniMessage miniMessage = MiniMessage.miniMessage();
+        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+        result = serializer.serialize(miniMessage.deserialize(result));
+        
+        ((CommandSender) player).sendMessage(result);
     }
 
     @Override
@@ -206,7 +213,12 @@ public class BukkitMethods implements MethodInterface {
     @Override
     public void kickPlayer(String player, String reason) {
         if (getPlayer(player) != null && getPlayer(player).isOnline()) {
-            getPlayer(player).kickPlayer(reason);
+            String result = reason;
+            MiniMessage miniMessage = MiniMessage.miniMessage();
+            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
+            result = serializer.serialize(miniMessage.deserialize(result));
+            
+            getPlayer(player).kickPlayer(result);
         }
     }
 
