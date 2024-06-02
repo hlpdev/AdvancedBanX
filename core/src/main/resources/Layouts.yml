@@ -26,8 +26,8 @@ Message:
     - "<red>Unban in <dark_gray>»</dark_gray> <gray>%DURATION%</gray></red>"
     - ''
     - '<dark_gray>Unban application in TS or forum</dark_gray>'
-    - "<yellow>TS-Ip</yellow> <dark_gray>»</dark_gray> <red><underline>coming soon</underline></red>"
-    - "<yellow>Forum</yellow> <dark_gray>»</dark_gray> <red><underline>coming soon</underline></red>"
+    - "<yellow>TS-Ip</yellow> <dark_gray>»</dark_gray> <red><underlined>coming soon</underlined></red>"
+    - "<yellow>Forum</yellow> <dark_gray>»</dark_gray> <red><underlined>coming soon</underlined></red>"
   ExampleLayout2:
     - '%PREFIX% <gray>Banned for offensive language</gray>'
     - ''

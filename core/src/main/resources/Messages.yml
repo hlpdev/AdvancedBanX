@@ -26,8 +26,8 @@ Ban:
     - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
     - ''
     - '<dark_gray>Unban application in TS or forum</dark_gray>'
-    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
-    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
   Notification:
     - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
     - "<gray>For the reason <italic>%REASON%</italic></gray>"
@@ -42,8 +42,8 @@ Ipban:
     - "<red>Reason <dark_gray>»</dark_gray></red> <gray>%REASON%</gray>"
     - ''
     - '<dark_gray>Unban application in TS or forum</dark_gray>'
-    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
-    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
   Notification:
     - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
     - "<gray>For the reason <italic>%REASON%</italic></gray>"
@@ -60,8 +60,8 @@ Tempban:
     - "<red>Duration <dark_gray>»</dark_gray></red> <gray>%DURATION%</gray>"
     - ''
     - '<dark_gray>Unban application in TS or forum</dark_gray>'
-    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
-    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
   Notification:
     - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
     - "<gray>For the reason <italic>%REASON%</italic></gray>"
@@ -78,8 +78,8 @@ Tempipban:
     - "<red>Duration <dark_gray>»</dark_gray></red> <gray>%DURATION%</gray>"
     - ''
     - '<dark_gray>Unban application in TS or forum</dark_gray>'
-    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
-    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underline>coming soon</underline></red>"
+    - "<yellow>TS-Ip <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
+    - "<yellow>Forum <dark_gray>»</dark_gray></yellow> <red><underlined>coming soon</underlined></red>"
   Notification:
     - "<red><italic>%NAME%</italic></red> <gray>got banned by</gray> <yellow><italic>%OPERATOR%<italic></yellow>"
     - "<gray>For the reason <italic>%REASON%</italic></gray>"
