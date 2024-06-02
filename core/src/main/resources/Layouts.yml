@@ -1,6 +1,6 @@
 # AdvancedBan v3 - Coded by Leoko, Update & Maintained by 2vY (hlpdev)
 # MiniMessage Formatting (https://docs.advntr.dev/minimessage/format.html) are available in all strings
-# Regular ampersand color codes cannot be used.
+# Legacy formatting can also be used in all strings.
 
 # The default layouts are in the Message.yml file!
 
