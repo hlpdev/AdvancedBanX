@@ -23,7 +23,7 @@ public class PubSubMessageListener implements Listener {
 	@EventHandler
     public void onMessageReceive(PubSubMessageEvent e) {
         if (e.getChannel().equals("advancedban:main")) {
-            String result = e.getMessage();
+            String result = e.getMessage().replace('§', '&');
             MiniMessage miniMessage = MiniMessage.miniMessage();
             LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
             result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));

@@ -14,7 +14,7 @@ public class CloudNetV2Support implements CloudSupport {
 
     @Override
     public void kick(UUID uniqueID, String reason) {
-        String result = reason;
+        String result = reason.replace('§', '&');
         MiniMessage miniMessage = MiniMessage.miniMessage();
         LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
         result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));

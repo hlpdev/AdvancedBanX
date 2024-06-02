@@ -35,7 +35,7 @@ public class ConnectionListenerBungee implements Listener {
             if (result != null) {
                 MiniMessage miniMessage = MiniMessage.miniMessage();
                 LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
-                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
+                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result.replace('§', '&'))));
                 
                 if(BungeeMain.getCloudSupport() != null){
                     BungeeMain.getCloudSupport().kick(event.getConnection().getUniqueId(), result);

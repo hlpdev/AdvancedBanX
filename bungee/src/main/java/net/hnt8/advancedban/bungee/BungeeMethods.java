@@ -187,7 +187,7 @@ public class BungeeMethods implements MethodInterface {
     @SuppressWarnings("deprecation")
     @Override
     public void sendMessage(Object player, String msg) {
-        String result = msg;
+        String result = msg.replace('§', '&');
         MiniMessage miniMessage = MiniMessage.miniMessage();
         LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
         result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
@@ -232,7 +232,7 @@ public class BungeeMethods implements MethodInterface {
 
     @Override
     public void kickPlayer(String player, String reason) {
-        String result = reason;
+        String result = reason.replace('§', '&');
         MiniMessage miniMessage = MiniMessage.miniMessage();
         LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
         result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
