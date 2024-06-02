@@ -7,6 +7,7 @@ import net.hnt8.advancedban.manager.UUIDManager;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -25,8 +26,8 @@ public class ConnectionListener implements Listener {
             String result = Universal.get().callConnection(event.getName(), event.getAddress().getHostAddress());
             if (result != null) {
                 MiniMessage miniMessage = MiniMessage.miniMessage();
-                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-                result = serializer.serialize(miniMessage.deserialize(result));
+                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
                 
                 event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_BANNED, result);
             }

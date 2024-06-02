@@ -7,6 +7,7 @@ import net.hnt8.advancedban.manager.PunishmentManager;
 import net.hnt8.advancedban.manager.UUIDManager;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.event.LoginEvent;
 import net.md_5.bungee.api.event.PlayerDisconnectEvent;
@@ -33,8 +34,8 @@ public class ConnectionListenerBungee implements Listener {
 
             if (result != null) {
                 MiniMessage miniMessage = MiniMessage.miniMessage();
-                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-                result = serializer.serialize(miniMessage.deserialize(result));
+                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
                 
                 if(BungeeMain.getCloudSupport() != null){
                     BungeeMain.getCloudSupport().kick(event.getConnection().getUniqueId(), result);

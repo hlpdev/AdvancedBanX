@@ -189,8 +189,8 @@ public class BungeeMethods implements MethodInterface {
     public void sendMessage(Object player, String msg) {
         String result = msg;
         MiniMessage miniMessage = MiniMessage.miniMessage();
-        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-        result = serializer.serialize(miniMessage.deserialize(result));
+        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+        result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
         ((CommandSender) player).sendMessage(result);
     }
 
@@ -234,8 +234,8 @@ public class BungeeMethods implements MethodInterface {
     public void kickPlayer(String player, String reason) {
         String result = reason;
         MiniMessage miniMessage = MiniMessage.miniMessage();
-        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-        result = serializer.serialize(miniMessage.deserialize(result));
+        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+        result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
         if(BungeeMain.getCloudSupport() != null){
             BungeeMain.getCloudSupport().kick(getPlayer(player).getUniqueId(), result);
         }else if (Universal.isRedis()) {

@@ -179,8 +179,8 @@ public class BukkitMethods implements MethodInterface {
     public void sendMessage(Object player, String msg) {
         String result = msg;
         MiniMessage miniMessage = MiniMessage.miniMessage();
-        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-        result = serializer.serialize(miniMessage.deserialize(result));
+        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+        result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
         
         ((CommandSender) player).sendMessage(result);
     }
@@ -215,8 +215,8 @@ public class BukkitMethods implements MethodInterface {
         if (getPlayer(player) != null && getPlayer(player).isOnline()) {
             String result = reason;
             MiniMessage miniMessage = MiniMessage.miniMessage();
-            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-            result = serializer.serialize(miniMessage.deserialize(result));
+            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+            result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
             
             getPlayer(player).kickPlayer(result);
         }

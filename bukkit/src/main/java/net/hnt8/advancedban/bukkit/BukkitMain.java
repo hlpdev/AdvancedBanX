@@ -8,6 +8,7 @@ import net.hnt8.advancedban.bukkit.listener.InternalListener;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -35,8 +36,8 @@ public class BukkitMain extends JavaPlugin {
             if (apple.getLoginResult() == AsyncPlayerPreLoginEvent.Result.KICK_BANNED) {
                 String result = apple.getKickMessage();
                 MiniMessage miniMessage = MiniMessage.miniMessage();
-                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-                result = serializer.serialize(miniMessage.deserialize(result));
+                LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+                result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
                 
                 player.kickPlayer(result);
             }

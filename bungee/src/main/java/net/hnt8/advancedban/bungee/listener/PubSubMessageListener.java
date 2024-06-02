@@ -5,6 +5,7 @@ import net.hnt8.advancedban.MethodInterface;
 import net.hnt8.advancedban.Universal;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Listener;
@@ -24,8 +25,8 @@ public class PubSubMessageListener implements Listener {
         if (e.getChannel().equals("advancedban:main")) {
             String result = e.getMessage();
             MiniMessage miniMessage = MiniMessage.miniMessage();
-            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacy('§');
-            result = serializer.serialize(miniMessage.deserialize(result));
+            LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
+            result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
 
             String[] msg = result.split(" ");
             
