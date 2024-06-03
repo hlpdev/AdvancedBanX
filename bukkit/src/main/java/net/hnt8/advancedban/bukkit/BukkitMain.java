@@ -5,6 +5,7 @@ import net.hnt8.advancedban.bukkit.listener.ChatListener;
 import net.hnt8.advancedban.bukkit.listener.CommandListener;
 import net.hnt8.advancedban.bukkit.listener.ConnectionListener;
 import net.hnt8.advancedban.bukkit.listener.InternalListener;
+import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
@@ -14,14 +15,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class BukkitMain extends JavaPlugin {
     private static BukkitMain instance;
+    private static BukkitAudiences adventure;
 
     public static BukkitMain get() {
         return instance;
     }
+    public static BukkitAudiences getAdventure() { return adventure; }
 
     @Override
     public void onEnable() {
         instance = this;
+        adventure = BukkitAudiences.create(this);
+        
         Universal.get().setup(new BukkitMethods());
 
         ConnectionListener connListener = new ConnectionListener();
@@ -47,6 +52,9 @@ public class BukkitMain extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        adventure.close();
+        adventure = null;
+        
         Universal.get().shutdown();
     }
 }
