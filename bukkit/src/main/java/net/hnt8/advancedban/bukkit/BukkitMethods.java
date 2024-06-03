@@ -175,7 +175,7 @@ public class BukkitMethods implements MethodInterface {
                     return tabCompleter.onTabComplete(commandSender, args);
                 });
         } else {
-            System.out.println("AdvancedBan >> Failed to register command " + cmd);
+            BukkitMain.get().getLogger().warning("AdvancedBanX >> Failed to register command " + cmd);
         }
     }
 
@@ -314,7 +314,7 @@ public class BukkitMethods implements MethodInterface {
         try {
             return ((JSONObject) new JSONParser().parse(json)).get(key).toString();
         } catch (ParseException | IOException e) {
-            System.out.println("Error -> " + e.getMessage());
+            BukkitMain.get().getLogger().warning("Error -> " + e.getMessage());
             return null;
         }
     }

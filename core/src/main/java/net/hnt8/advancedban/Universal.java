@@ -348,7 +348,7 @@ public class Universal {
      * @param msg the msg
      */
     public void log(String msg) {
-        mi.log("§8[§cAdvancedBan§8] §7" + msg);
+        mi.log("§8[§cAdvancedBanX§8] §7" + msg);
         debugToFile(msg);
     }
 
@@ -359,7 +359,7 @@ public class Universal {
      */
     public void debug(Object msg) {
         if (mi.getBoolean(mi.getConfig(), "Debug", false)) {
-            mi.log("§8[§cAdvancedBan§8] §cDebug: §7" + msg.toString());
+            mi.log("§8[§cAdvancedBanX§8] §cDebug: §7" + msg.toString());
         }
         debugToFile(msg);
     }
