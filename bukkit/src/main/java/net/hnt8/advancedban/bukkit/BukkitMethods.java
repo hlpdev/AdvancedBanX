@@ -12,6 +12,10 @@ import net.hnt8.advancedban.manager.UUIDManager;
 import net.hnt8.advancedban.utils.Permissionable;
 import net.hnt8.advancedban.utils.Punishment;
 import net.hnt8.advancedban.utils.tabcompletion.TabCompleter;
+import net.kyori.adventure.audience.Audience;
+import net.kyori.adventure.platform.bukkit.BukkitAudiences;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextReplacementConfig;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
@@ -177,12 +181,14 @@ public class BukkitMethods implements MethodInterface {
 
     @Override
     public void sendMessage(Object player, String msg) {
-        String result = msg.replace('§', '&');
         MiniMessage miniMessage = MiniMessage.miniMessage();
-        LegacyComponentSerializer serializer = LegacyComponentSerializer.legacyAmpersand();
-        result = ChatColor.translateAlternateColorCodes('&', serializer.serialize(miniMessage.deserialize(result)));
         
-        ((CommandSender) player).sendMessage(result);
+        TextReplacementConfig replacementConfig = TextReplacementConfig.builder().matchLiteral("&").replacement("§").build();
+        Component msgComponent = miniMessage.deserialize(msg).replaceText(replacementConfig);
+        
+        BukkitAudiences adventure = BukkitMain.getAdventure();
+        Audience audience = adventure.sender((CommandSender)player);
+        audience.sendMessage(msgComponent);
     }
 
     @Override
