@@ -24,7 +24,8 @@ DetailedDisableMessage: true
 LockdownOnError: true
 
 # This will be the default reason to be displayed if none is given
-# !! You may use legacy formatting as well as MiniMessage formatting (https://docs.advntr.dev/minimessage/format.html)
+# !! You may use MiniMessage formatting (https://docs.advntr.dev/minimessage/format.html)
+# !! Legacy (&/§) formatting is not supported and will cause errors
 DefaultReason: "No reason provided."
 
 # Change this if your server has a different time that your users.
@@ -103,7 +104,8 @@ UUID-Fetcher:
 # If you skip a number the command from before will be performed
 # You can also use non-AdvancedBan-Commands like 'broadcast' or 'clear %PLAYER%
 # Variables: %PLAYER%, %REASON%, %COUNT%
-# !! You may use legacy formatting as well as MiniMessage formatting (https://docs.advntr.dev/minimessage/format.html)
+# !! You may use MiniMessage formatting (https://docs.advntr.dev/minimessage/format.html)
+# !! Legacy (&/§) formatting is not supported and will cause errors
 WarnActions:
   3: "kick %PLAYER% You have received your 3rd warning!"
   4: "tempban %PLAYER% 30m You have received your 4th warning!"

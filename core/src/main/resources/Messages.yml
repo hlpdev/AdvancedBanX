@@ -1,6 +1,6 @@
 # AdvancedBan v3 - Coded by Leoko, Update & Maintained by 2vY (hlpdev)
 # MiniMessage Formatting (https://docs.advntr.dev/minimessage/format.html) are available in all strings
-# Legacy formatting can also be used in all strings.
+# Legacy (&/§) formatting is not supported and will cause errors
 
 General:
   Prefix: "<bold><red>AdvancedBanX</red> <dark_gray>»</dark_gray></bold>"
