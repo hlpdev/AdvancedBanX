@@ -5,7 +5,7 @@ import net.hnt8.advancedban.Universal;
 import net.hnt8.advancedban.bukkit.event.PunishmentEvent;
 import net.hnt8.advancedban.bukkit.event.RevokePunishmentEvent;
 import net.hnt8.advancedban.bukkit.listener.CommandReceiver;
-import net.hnt8.advancedban.bukkit.utils.Metrics;
+import net.hnt8.advancedban.bukkit.utils.BukkitMetrics;
 import net.hnt8.advancedban.manager.DatabaseManager;
 import net.hnt8.advancedban.manager.PunishmentManager;
 import net.hnt8.advancedban.manager.UUIDManager;
@@ -138,8 +138,8 @@ public class BukkitMethods implements MethodInterface {
 
     @Override
     public void setupMetrics() {
-        Metrics metrics = new Metrics(getPlugin(), 22106);
-        metrics.addCustomChart(new Metrics.SimplePie("MySQL", () -> DatabaseManager.get().isUseMySQL() ? "yes" : "no"));
+        BukkitMetrics metrics = new BukkitMetrics(getPlugin(), 22106);
+        metrics.addCustomChart(new BukkitMetrics.SimplePie("MySQL", () -> DatabaseManager.get().isUseMySQL() ? "yes" : "no"));
     }
 
     @Override
