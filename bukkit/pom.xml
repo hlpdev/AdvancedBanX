@@ -47,12 +47,6 @@
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>net.hnt8.advancedban</groupId>
-            <artifactId>AdvancedBanX-Core</artifactId>
-            <version>3.0.4</version>
-            <scope>compile</scope>
-        </dependency>
 
         <dependency>
             <groupId>net.kyori</groupId>
