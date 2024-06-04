@@ -55,10 +55,15 @@ public class MessageManager {
     public static String getMessage(String path, boolean prefix, String... parameters) {
     	MethodInterface mi = mi();
         String prefixStr = "";
-        if(prefix && !mi.getBoolean(mi.getConfig(), "Disable Prefix", false))
+        if (prefix && !mi.getBoolean(mi.getConfig(), "Disable Prefix", false)) {
             prefixStr = getMessage("General.Prefix")+" ";
+            
+            if (prefixStr.isBlank()) {
+                prefixStr = "";
+            }
+        }
 
-        return prefixStr+getMessage(path, parameters);
+        return prefixStr + getMessage(path, parameters);
     }
 
     /**
