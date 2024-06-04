@@ -46,7 +46,7 @@ import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
 
-public class Metrics {
+public class BungeeMetrics {
 
     private final Plugin plugin;
 
@@ -69,7 +69,7 @@ public class Metrics {
      * @param serviceId The id of the service. It can be found at <a
      *     href="https://bstats.org/what-is-my-plugin-id">What is my plugin id?</a>
      */
-    public Metrics(Plugin plugin, int serviceId) {
+    public BungeeMetrics(Plugin plugin, int serviceId) {
         this.plugin = plugin;
         try {
             loadConfig();

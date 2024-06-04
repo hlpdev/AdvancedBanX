@@ -12,7 +12,7 @@ import net.hnt8.advancedban.bungee.event.RevokePunishmentEvent;
 import net.hnt8.advancedban.bungee.listener.CommandReceiverBungee;
 import net.hnt8.advancedban.bungee.utils.CloudNetCloudPermsOfflineUser;
 import net.hnt8.advancedban.bungee.utils.LuckPermsOfflineUser;
-import net.hnt8.advancedban.bungee.utils.Metrics;
+import net.hnt8.advancedban.bungee.utils.BungeeMetrics;
 import net.hnt8.advancedban.manager.DatabaseManager;
 import net.hnt8.advancedban.manager.PunishmentManager;
 import net.hnt8.advancedban.manager.UUIDManager;
@@ -159,8 +159,8 @@ public class BungeeMethods implements MethodInterface {
 
     @Override
     public void setupMetrics() {
-        Metrics metrics = new Metrics(getPlugin(), 22106);
-        metrics.addCustomChart(new Metrics.SimplePie("MySQL", () -> DatabaseManager.get().isUseMySQL() ? "yes" : "no"));
+        BungeeMetrics metrics = new BungeeMetrics(getPlugin(), 22106);
+        metrics.addCustomChart(new BungeeMetrics.SimplePie("MySQL", () -> DatabaseManager.get().isUseMySQL() ? "yes" : "no"));
     }
 
     @Override
