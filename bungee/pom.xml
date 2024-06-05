@@ -48,6 +48,20 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- CloudNet v4-->
+        <dependency>
+            <groupId>eu.cloudnetservice.cloudnet</groupId>
+            <artifactId>driver</artifactId>
+            <version>4.0.0-RC5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>eu.cloudnetservice.cloudnet</groupId>
+            <artifactId>bridge</artifactId>
+            <version>4.0.0-RC5</version>
+            <scope>provided</scope>
+        </dependency>
+        
         <!-- CloudNet v3-->
         <dependency>
             <groupId>de.dytanic.cloudnet</groupId>
@@ -69,6 +83,7 @@
             <version>2.1.17</version>
             <scope>provided</scope>
         </dependency>
+        
         <!-- CloudNet Core -->
         <dependency>
             <groupId>de.dytanic.cloudnet</groupId>
