@@ -35,7 +35,7 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.3</version>
                 <configuration>
-                    <finalName>${project.artifactId}-${project.version}</finalName>
+                    <finalName>${project.parent.artifactId}-${project.version}</finalName>
                     <relocations>
                     	<relocation>
                     		<pattern>org.apache.commons</pattern>
