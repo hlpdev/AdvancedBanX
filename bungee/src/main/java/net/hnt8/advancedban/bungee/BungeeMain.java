@@ -45,7 +45,6 @@ public class BungeeMain extends Plugin {
 
         cloudSupport = CloudSupportHandler.getCloudSystem();
 
-
         if (ProxyServer.getInstance().getPluginManager().getPlugin("RedisBungee") != null) {
             Universal.setRedis(true);
             ProxyServer.getInstance().getPluginManager().registerListener(this, new PubSubMessageListener());
