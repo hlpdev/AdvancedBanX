@@ -1,4 +1,4 @@
-# AdvancedBanX
+# AdvancedBanX 3.0.6
 
 Bukkit & BungeeCord Plugin Bundle <br>
 Check out our [Spigot-Page](https://www.spigotmc.org/resources/advancedbanx.117067/) for more  information!
@@ -22,6 +22,36 @@ also a detailed main configuration file with a lot of useful settings. At
 the moment, AdvancedBanX supports Bukkit (as well as spigot/paper) and 
 Bungeecord. It also supports MySQL and Local File saving as it's storage 
 platform.
+
+## API
+The API requires the AdvancedBanX plugin to be installed on the server. When making an addon, make sure to make it clear that the main AdvancedBanX plugin is also required!
+
+#### Maven:
+```xml
+<repositories>
+    ...
+
+    <repository>
+        <id>hnt8</id>
+        <url>https://java.hnt8.net</url>
+    </repository>
+    
+    ...
+</repositories>
+
+<dependencies>
+    ...
+    
+    <dependency>
+        <groupId>net.hnt8.advancedban</groupId>
+        <artifactId>AdvancedBanX</artifactId>
+        <version>3.0.6</version>
+        <scope>provided</scope>
+    </dependency>
+
+    ...
+</dependencies>
+```
 
 ## Goals
 * Sponge Support
