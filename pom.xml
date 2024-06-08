@@ -6,7 +6,7 @@
     
     <groupId>net.hnt8.advancedban</groupId>
     <artifactId>AdvancedBanX</artifactId>
-    <version>3.0.5</version>
+    <version>3.0.6</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -24,13 +24,6 @@
         
         <junit5.version>5.10.2</junit5.version>
     </properties>
-
-    <distributionManagement>
-        <repository>
-            <id>HNT8</id>
-            <url>https://java.hnt8.net</url>
-        </repository>
-    </distributionManagement>
 
     <build>
         <finalName>${project.artifactId}-${project.version}-${build}</finalName>
