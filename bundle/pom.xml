@@ -28,6 +28,14 @@
         </dependency>
     </dependencies>
     
+    <distributionManagement>
+        <repository>
+            <id>hnt8</id>
+            <name>HNT8 Java Repository</name>
+            <url>https://java.hnt8.net</url>
+        </repository>
+    </distributionManagement>
+    
     <build>
         <plugins>
             <plugin>
