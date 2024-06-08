@@ -1,0 +1,9 @@
+<settings>
+    <servers>
+        <server>
+            <id>hnt8</id>
+            <username>${env.HNT8_USERNAME}</username>
+            <password>${env.HNT8_PASSWORD}</password>
+        </server>
+    </servers>
+</settings>
