@@ -71,6 +71,18 @@
             <!-- Usually provided by the server implementation -->
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>net.kyori</groupId>
+            <artifactId>adventure-text-minimessage</artifactId>
+            <version>4.17.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.kyori</groupId>
+            <artifactId>adventure-text-serializer-ansi</artifactId>
+            <version>4.17.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
