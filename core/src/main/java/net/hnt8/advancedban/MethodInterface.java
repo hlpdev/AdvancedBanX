@@ -7,6 +7,7 @@ import net.hnt8.advancedban.utils.tabcompletion.TabCompleter;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * The Method Interface is used to define universal actions which are dependent on the server software used.
@@ -404,11 +405,9 @@ public interface MethodInterface {
     void notify(String perm, List<String> notification);
 
     /**
-     * Log a message.
-     *
-     * @param msg the msg
+     * Gets the plugin's logger
      */
-    void log(String msg);
+    Logger getLogger();
 
     /**
      * Whether this instance is used for unit testing.
