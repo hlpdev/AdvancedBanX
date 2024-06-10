@@ -52,7 +52,7 @@
         <dependency>
             <groupId>eu.cloudnetservice.cloudnet</groupId>
             <artifactId>driver</artifactId>
-            <version>4.0.0-RC5</version>
+            <version>4.0.0-RC10</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
