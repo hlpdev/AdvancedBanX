@@ -7,7 +7,7 @@
     <parent>
         <groupId>net.hnt8.advancedban</groupId>
         <artifactId>AdvancedBanX</artifactId>
-        <version>3.0.6</version>
+        <version>3.1.0</version>
     </parent>
 
     <artifactId>AdvancedBanX-Bukkit</artifactId>

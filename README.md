@@ -1,4 +1,4 @@
-# AdvancedBanX 3.0.6
+# AdvancedBanX 3.1.0
 
 Bukkit & BungeeCord Plugin Bundle <br>
 Check out our [Spigot-Page](https://www.spigotmc.org/resources/advancedbanx.117067/) for more  information!
@@ -45,7 +45,7 @@ The API requires the AdvancedBanX plugin to be installed on the server. When mak
     <dependency>
         <groupId>net.hnt8.advancedban</groupId>
         <artifactId>AdvancedBanX</artifactId>
-        <version>3.0.6</version>
+        <version>3.1.0</version>
         <scope>provided</scope>
     </dependency>
 
