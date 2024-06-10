@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 /**
@@ -71,7 +72,7 @@ public class Universal {
         try {
             DatabaseManager.get().setup(mi.getBoolean(mi.getConfig(), "UseMySQL", false));
         } catch (Exception ex) {
-            log("Failed enabling database-manager...");
+            getLogger().severe("Failed enabling database-manager...");
             debugException(ex);
         }
 
@@ -93,7 +94,7 @@ public class Universal {
         }
 
         if (mi.getBoolean(mi.getConfig(), "DetailedEnableMessage", true)) {
-            mi.log("\n \n&8[]=====[&7Enabling AdvancedBanX&8]=====[]&r"
+            mi.getLogger().info(("\n \n&8[]=====[&7Enabling AdvancedBanX&8]=====[]&r"
                     + "\n&8| &cInformation:&r"
                     + "\n&8|   &cName: &7AdvancedBanX&r"
                     + "\n&8|   &cDeveloper: &7Leoko&r"
@@ -104,10 +105,12 @@ public class Universal {
                     + "\n&8|   &cGithub: &7https://github.com/hlpdev/AdvancedBanX/issues &r"
                     + "\n&8| &cUpdate:&r"
                     + "\n&8|   &7" + upt  + "&r"
-                    + "\n&8[]================================[]&r\n ");
+                    + "\n&8[]================================[]&r\n ").replace('&', '§'));
         } else {
             mi.log("&cEnabling AdvancedBanX on Version &7&r" + mi.getVersion());
             mi.log("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY");
+            mi.getLogger().info(("&cEnabling AdvancedBanX on Version &7&r" + mi.getVersion()).replace('&', '§'));
+            mi.getLogger().info("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY".replace('&', '§'));
         }
     }
 
@@ -118,7 +121,7 @@ public class Universal {
         DatabaseManager.get().shutdown();
 
         if (mi.getBoolean(mi.getConfig(), "DetailedDisableMessage", true)) {
-            mi.log("\n \n&8[]=====[&7Disabling AdvancedBanX&8]=====[]"
+            mi.getLogger().info(("\n \n&8[]=====[&7Disabling AdvancedBanX&8]=====[]"
                     + "\n&8| &cInformation:"
                     + "\n&8|   &cName: &7AdvancedBanX"
                     + "\n&8|   &cDeveloper: &7Leoko&r"
@@ -127,10 +130,10 @@ public class Universal {
                     + "\n&8|   &cStorage: &7" + (DatabaseManager.get().isUseMySQL() ? "MySQL (external)" : "HSQLDB (local)")
                     + "\n&8| &cSupport:"
                     + "\n&8|   &cGithub: &7https://github.com/hlpdev/AdvancedBanX/issues &r"
-                    + "\n&8[]================================[]&r\n ");
+                    + "\n&8[]================================[]&r\n ").replace('&', '§'));
         } else {
-            mi.log("&cDisabling AdvancedBanX on Version &7" + getMethods().getVersion());
-            mi.log("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY");
+            mi.getLogger().info(("&cDisabling AdvancedBanX on Version &7" + getMethods().getVersion()).replace('&', '§'));
+            mi.getLogger().info("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY");
         }
     }
 
@@ -180,7 +183,7 @@ public class Universal {
                 s.close();
             }
         } catch (IOException exc) {
-            debug("!! Failed to connect to URL: " + surl);
+            getLogger().warning("!! Failed to connect to URL: " + surl);
         }
         return response;
     }
@@ -368,7 +371,7 @@ public class Universal {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         exc.printStackTrace(pw);
-        debug(sw.toString());
+        getLogger().fine(sw.toString());
     }
 
     /**
@@ -378,9 +381,9 @@ public class Universal {
      */
     public void debugSqlException(SQLException ex) {
         if (mi.getBoolean(mi.getConfig(), "Debug", false)) {
-            debug("§7An error has occurred with the database, the error code is: '" + ex.getErrorCode() + "'");
-            debug("§7The state of the sql is: " + ex.getSQLState());
-            debug("§7Error message: " + ex.getMessage());
+            getLogger().fine("§7An error has occurred with the database, the error code is: '" + ex.getErrorCode() + "'");
+            getLogger().fine("§7The state of the sql is: " + ex.getSQLState());
+            getLogger().fine("§7Error message: " + ex.getMessage());
         }
         debugException(ex);
     }
@@ -391,8 +394,8 @@ public class Universal {
             try {
                 debugFile.createNewFile();
             } catch (IOException ex) {
-                System.out.print("An error has occurred creating the 'latest.log' file again, check your server.");
-                System.out.print("Error message" + ex.getMessage());
+                Universal.get().getMethods().getLogger().warning("An error has occurred creating the 'latest.log' file again, check your server.");
+                Universal.get().getMethods().getLogger().warning("Error message" + ex.getMessage());
             }
         } else {
             logManager.checkLastLog(false);
@@ -400,8 +403,8 @@ public class Universal {
         try {
             FileUtils.writeStringToFile(debugFile, "[" + new SimpleDateFormat("HH:mm:ss").format(System.currentTimeMillis()) + "] " + mi.clearFormatting(msg.toString()) + "\n", "UTF8", true);
         } catch (IOException ex) {
-            System.out.print("An error has occurred writing to 'latest.log' file.");
-            System.out.print(ex.getMessage());
+            Universal.get().getMethods().getLogger().warning("An error has occurred writing to 'latest.log' file.");
+            Universal.get().getMethods().getLogger().warning(ex.getMessage());
         }
     }
 }
