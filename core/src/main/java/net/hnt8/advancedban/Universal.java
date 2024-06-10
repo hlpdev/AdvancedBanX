@@ -107,8 +107,6 @@ public class Universal {
                     + "\n&8|   &7" + upt  + "&r"
                     + "\n&8[]================================[]&r\n ").replace('&', '§'));
         } else {
-            mi.log("&cEnabling AdvancedBanX on Version &7&r" + mi.getVersion());
-            mi.log("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY");
             mi.getLogger().info(("&cEnabling AdvancedBanX on Version &7&r" + mi.getVersion()).replace('&', '§'));
             mi.getLogger().info("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY".replace('&', '§'));
         }
