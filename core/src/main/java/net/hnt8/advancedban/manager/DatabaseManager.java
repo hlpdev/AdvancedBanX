@@ -51,8 +51,8 @@ public class DatabaseManager {
         try {
             dataSource = new DynamicDataSource(useMySQL).generateDataSource();
         } catch (ClassNotFoundException ex) {
-            Universal.get().log("ERROR: Failed to configure data source!");
-            Universal.get().debug(ex.getMessage());
+            Universal.get().getLogger().severe("ERROR: Failed to configure data source!");
+            Universal.get().getLogger().fine(ex.getMessage());
             return;
         }
 
@@ -68,7 +68,7 @@ public class DatabaseManager {
             try(Connection connection = dataSource.getConnection(); final PreparedStatement statement = connection.prepareStatement("SHUTDOWN")){
                 statement.execute();
             }catch (SQLException | NullPointerException exc){
-                Universal.get().log("An unexpected error has occurred turning off the database");
+                Universal.get().getLogger().warning("An unexpected error has occurred turning off the database");
                 Universal.get().debugException(exc);
             }
         }
@@ -122,15 +122,15 @@ public class DatabaseManager {
     		}
    			statement.execute();
     	} catch (SQLException ex) {
-    		Universal.get().log(
+    		Universal.get().getLogger().severe(
    					"An unexpected error has occurred executing an Statement in the database\n"
    							+ "Please check the plugins/AdvancedBanX/logs/latest.log file and report this "
     						+ "error in: https://github.com/hlpdev/AdvancedBanX/issues/new"
     				);
-    		Universal.get().debug("Query: \n" + sql);
+    		Universal.get().getLogger().fine("Query: \n" + sql);
     		Universal.get().debugSqlException(ex);
        	} catch (NullPointerException ex) {
-            Universal.get().log(
+            Universal.get().getLogger().severe(
                     "An unexpected error has occurred connecting to the database\n"
                             + "Check if your MySQL data is correct and if your MySQL-Server is online\n"
                             + "Please check the plugins/AdvancedBanX/logs/latest.log file and report this "
