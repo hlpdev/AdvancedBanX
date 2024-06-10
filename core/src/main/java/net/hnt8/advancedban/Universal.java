@@ -5,6 +5,9 @@ import net.hnt8.advancedban.manager.*;
 import net.hnt8.advancedban.utils.Command;
 import net.hnt8.advancedban.utils.InterimData;
 import net.hnt8.advancedban.utils.Punishment;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.ansi.ANSIComponentSerializer;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -44,10 +47,6 @@ public class Universal {
 
     private final Gson gson = new Gson();
 
-
-
-
-
     /**
      * Get universal.
      *
@@ -64,6 +63,11 @@ public class Universal {
      */
     public Logger getLogger() {
         return mi.getLogger();
+    }
+    
+    private String SerializeMiniMessage(String message) {
+        Component messageComponent = MiniMessage.miniMessage().deserialize(message);
+        return ANSIComponentSerializer.ansi().serialize(messageComponent);
     }
     
     /**
