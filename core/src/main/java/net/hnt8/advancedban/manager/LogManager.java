@@ -10,8 +10,6 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.zip.GZIPOutputStream;
 
 /**
@@ -64,7 +62,7 @@ public class LogManager {
                     latestLog.delete();
                     latestLog.createNewFile();
                 } catch (IOException ex) {
-                    Logger.getLogger(LogManager.class.getName()).log(Level.WARNING, "An unexpected error has occurred while trying to compress the latest log file. {0}", ex.getMessage());
+                    Universal.get().getMethods().getLogger().warning("An unexpected error has occurred while trying to compress the latest log file. " + ex.getMessage());
                 }
             }
         }
