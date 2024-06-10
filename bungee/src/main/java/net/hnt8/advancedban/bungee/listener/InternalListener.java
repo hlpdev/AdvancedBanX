@@ -18,7 +18,10 @@ import net.md_5.bungee.api.event.PluginMessageEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -31,12 +34,12 @@ public class InternalListener implements Listener {
 
     @EventHandler
     public void onPunish(PunishmentEvent e) {
-        sendToBukkit("Punish", Arrays.asList(e.getPunishment().toString()));
+        sendToBukkit("Punish", Collections.singletonList(e.getPunishment().toString()));
     }
 
     @EventHandler
     public void onUnPunish(RevokePunishmentEvent e) {
-        sendToBukkit("Unpunish", Arrays.asList(e.getPunishment().toString()));
+        sendToBukkit("Unpunish", Collections.singletonList(e.getPunishment().toString()));
     }
 
     @EventHandler
@@ -68,10 +71,14 @@ public class InternalListener implements Listener {
                     universal.getLogger().info("A punishment was created using PluginMessaging listener.");
                     universal.getLogger().fine(punishment.toString());
                 } catch (JsonSyntaxException | NullPointerException ex) {
-                    universal.log("An exception as occurred while reading a punishment from plugin messaging channel.");
-                    universal.debug("Message: " + message);
-                    universal.log("StackTrace:");
-                    ex.printStackTrace();
+                    universal.getLogger().severe("An exception as occurred while reading a punishment from plugin messaging channel.");
+                    universal.getLogger().fine("Message: " + message);
+                    universal.getLogger().fine("StackTrace:");
+                    
+                    StringWriter stringWriter = new StringWriter();
+                    PrintWriter printWriter = new PrintWriter(stringWriter);
+                    ex.printStackTrace(printWriter);
+                    universal.getLogger().fine(stringWriter.toString());
                 }
                 break;
             default:
