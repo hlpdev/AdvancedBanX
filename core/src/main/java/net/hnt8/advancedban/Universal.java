@@ -107,21 +107,23 @@ public class Universal {
         }
 
         if (mi.getBoolean(mi.getConfig(), "DetailedEnableMessage", true)) {
-            mi.getLogger().info(("\n \n&8[]=====[&7Enabling AdvancedBanX&8]=====[]&r"
-                    + "\n&8| &cInformation:&r"
-                    + "\n&8|   &cName: &7AdvancedBanX&r"
-                    + "\n&8|   &cDeveloper: &7Leoko&r"
-                    + "\n&8|   &cMaintainer & Updater: &72vY&r"
-                    + "\n&8|   &cVersion: &7" + mi.getVersion() + "&r"
-                    + "\n&8|   &cStorage: &7" + (DatabaseManager.get().isUseMySQL() ? "MySQL (external)" : "HSQLDB (local)") + "&r"
-                    + "\n&8| &cSupport:&r"
-                    + "\n&8|   &cGithub: &7https://github.com/hlpdev/AdvancedBanX/issues &r"
-                    + "\n&8| &cUpdate:&r"
-                    + "\n&8|   &7" + upt  + "&r"
-                    + "\n&8[]================================[]&r\n ").replace('&', '§'));
+            String message = "\n\n<dark_gray>[]=====[<red>Enabling AdvancedBanX</red>]=====[]</dark_gray>"
+                           + "\n<dark_gray>|</dark_gray> <red>Information:</red>"
+                           + "\n<dark_gray>|</dark_gray>   <red>Name:</red> <gray>AdvancedBanX</gray>"
+                           + "\n<dark_gray>|</dark_gray>   <red>Developer:</red> <gray>Leoko</gray>"
+                           + "\n<dark_gray>|</dark_gray>   <red>Maintainer & Updater:</red> <gray>2vY</gray>"
+                           + "\n<dark_gray>|</dark_gray>   <red>Version:</red> <gray>" + mi.getVersion() + "</gray>"
+                           + "\n<dark_gray>|</dark_gray>   <red>Storage:</red> <gray>" + (DatabaseManager.get().isUseMySQL() ? "MySQL (external)" : "HSQLDB (local)") + "</gray>"
+                           + "\n<dark_gray>|</dark_gray> <red>Support:</red>"
+                           + "\n<dark_gray>|</dark_gray>   <red>GitHub:</red> <gray>https://github.com/hlpdev/AdvancedBanX/issues</gray>"
+                           + "\n<dark_gray>|</dark_gray> <red>Update:</red>"
+                           + "\n<dark_gray>|</dark_gray>   <gray>" + upt  + "</gray>"
+                           + "\n<dark_gray>[]================================[]</dark_gray>\n ";
+            
+            mi.getLogger().info(SerializeMiniMessage(message));
         } else {
-            mi.getLogger().info(("&cEnabling AdvancedBanX on Version &7&r" + mi.getVersion()).replace('&', '§'));
-            mi.getLogger().info("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY".replace('&', '§'));
+            mi.getLogger().info(SerializeMiniMessage("<red>Enabling AdvancedBanX on Version</red> <gray>" + mi.getVersion() + "</gray>"));
+            mi.getLogger().info(SerializeMiniMessage("<red>Coded by <gray>Leoko</gray> <dark_gray>|</dark_gray> Maintained & Updated by <gray>2vY</gray></red>"));
         }
     }
 
@@ -132,19 +134,21 @@ public class Universal {
         DatabaseManager.get().shutdown();
 
         if (mi.getBoolean(mi.getConfig(), "DetailedDisableMessage", true)) {
-            mi.getLogger().info(("\n \n&8[]=====[&7Disabling AdvancedBanX&8]=====[]"
-                    + "\n&8| &cInformation:"
-                    + "\n&8|   &cName: &7AdvancedBanX"
-                    + "\n&8|   &cDeveloper: &7Leoko&r"
-                    + "\n&8|   &cMaintainer & Updater: &72vY&r"
-                    + "\n&8|   &cVersion: &7" + getMethods().getVersion()
-                    + "\n&8|   &cStorage: &7" + (DatabaseManager.get().isUseMySQL() ? "MySQL (external)" : "HSQLDB (local)")
-                    + "\n&8| &cSupport:"
-                    + "\n&8|   &cGithub: &7https://github.com/hlpdev/AdvancedBanX/issues &r"
-                    + "\n&8[]================================[]&r\n ").replace('&', '§'));
+            String message = "\n\n<dark_gray>[]=====[<red>Disabling AdvancedBanX</red>]=====[]</dark_gray>"
+                    + "\n<dark_gray>|</dark_gray> <red>Information:</red>"
+                    + "\n<dark_gray>|</dark_gray>   <red>Name:</red> <gray>AdvancedBanX</gray>"
+                    + "\n<dark_gray>|</dark_gray>   <red>Developer:</red> <gray>Leoko</gray>"
+                    + "\n<dark_gray>|</dark_gray>   <red>Maintainer & Updater:</red> <gray>2vY</gray>"
+                    + "\n<dark_gray>|</dark_gray>   <red>Version:</red> <gray>" + mi.getVersion() + "</gray>"
+                    + "\n<dark_gray>|</dark_gray>   <red>Storage:</red> <gray>" + (DatabaseManager.get().isUseMySQL() ? "MySQL (external)" : "HSQLDB (local)") + "</gray>"
+                    + "\n<dark_gray>|</dark_gray> <red>Support:</red>"
+                    + "\n<dark_gray>|</dark_gray>   <red>GitHub:</red> <gray>https://github.com/hlpdev/AdvancedBanX/issues</gray>"
+                    + "\n<dark_gray>[]================================[]</dark_gray>\n ";
+            
+            mi.getLogger().info(SerializeMiniMessage(message));
         } else {
-            mi.getLogger().info(("&cDisabling AdvancedBanX on Version &7" + getMethods().getVersion()).replace('&', '§'));
-            mi.getLogger().info("&cCoded by &7Leoko &8| &cMaintained & Updated by &72vY");
+            mi.getLogger().info(SerializeMiniMessage("<red>Disabling AdvancedBanX on Version</red> <gray>" + mi.getVersion() + "</gray>"));
+            mi.getLogger().info(SerializeMiniMessage("<red>Coded by <gray>Leoko</gray> <dark_gray>|</dark_gray> Maintained & Updated by <gray>2vY</gray></red>"));
         }
     }
 
@@ -370,9 +374,9 @@ public class Universal {
      */
     public void debugSqlException(SQLException ex) {
         if (mi.getBoolean(mi.getConfig(), "Debug", false)) {
-            getLogger().fine("§7An error has occurred with the database, the error code is: '" + ex.getErrorCode() + "'");
-            getLogger().fine("§7The state of the sql is: " + ex.getSQLState());
-            getLogger().fine("§7Error message: " + ex.getMessage());
+            getLogger().fine(SerializeMiniMessage("<gray>An error has occurred with the database, the error code is: '" + ex.getErrorCode() + "'</gray>"));
+            getLogger().fine(SerializeMiniMessage("<gray>The state of the sql is: " + ex.getSQLState() + "</gray>"));
+            getLogger().fine(SerializeMiniMessage("<gray>Error message: " + ex.getMessage() + "</gray>"));
         }
         debugException(ex);
     }
