@@ -73,7 +73,7 @@ public class PunishmentManager {
 
         } catch (SQLException ex) {
         	Universal universal = universal();
-            universal.log("An error has occurred loading the punishments from the database.");
+            universal.getLogger().severe("An error has occurred loading the punishments from the database.");
             universal.debugSqlException(ex);
             return null;
         }
@@ -144,7 +144,7 @@ public class PunishmentManager {
                 }
             } catch (SQLException ex) {
             	Universal universal = universal();
-                universal.log("An error has occurred getting the punishments for " + target);
+                universal.getLogger().severe("An error has occurred getting the punishments for " + target);
                 universal.debugSqlException(ex);
             }
         }
@@ -171,8 +171,8 @@ public class PunishmentManager {
             rs.close();
         } catch (SQLException ex) {
         	Universal universal = universal();
-            universal.log("An error has occurred executing a query in the database.");
-            universal.debug("Query: \n" + sqlQuery);
+            universal.getLogger().severe("An error has occurred executing a query in the database.");
+            universal.getLogger().fine("Query: \n" + sqlQuery);
             universal.debugSqlException(ex);
         }
         return ptList;
@@ -200,8 +200,8 @@ public class PunishmentManager {
             }
         } catch (SQLException ex) {
         	Universal universal = universal();
-            universal.log("An error has occurred getting a punishment by his id.");
-            universal.debug("Punishment id: '" + id + "'");
+            universal.getLogger().severe("An error has occurred getting a punishment by his id.");
+            universal.getLogger().fine("Punishment id: '" + id + "'");
             universal.debugSqlException(ex);
         }
 
@@ -342,7 +342,7 @@ public class PunishmentManager {
 
         } catch (SQLException ex) {
         	Universal universal = universal();
-            universal.log("An error has occurred getting the level for the layout '" + layout + "' for '" + uuid + "'");
+            universal.getLogger().severe("An error has occurred getting the level for the layout '" + layout + "' for '" + uuid + "'");
             universal.debugSqlException(ex);
         }
         return i;
