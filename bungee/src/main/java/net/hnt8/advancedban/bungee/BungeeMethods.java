@@ -67,15 +67,15 @@ public class BungeeMethods implements MethodInterface {
         if (ProxyServer.getInstance().getPluginManager().getPlugin("LuckPerms") != null) {
             permissionableGenerator = LuckPermsOfflineUser::new;
 
-            log("[AdvancedBanX] Offline permission support through LuckPerms active");
+            getLogger().info("[AdvancedBanX] Offline permission support through LuckPerms active");
         } else if (ProxyServer.getInstance().getPluginManager().getPlugin("CloudNet-CloudPerms") != null) {
             permissionableGenerator = CloudNetCloudPermsOfflineUser::new;
 
-            log("[AdvancedBanX] Offline permission support through CloudNet-CloudPerms active");
+            getLogger().info("[AdvancedBanX] Offline permission support through CloudNet-CloudPerms active");
         } else {
             permissionableGenerator = null;
 
-            log("[AdvancedBanX] No offline permission support through LuckPerms or CloudNet-CloudPerms");
+            getLogger().info("[AdvancedBanX] No offline permission support through LuckPerms or CloudNet-CloudPerms");
         }
     }
 
