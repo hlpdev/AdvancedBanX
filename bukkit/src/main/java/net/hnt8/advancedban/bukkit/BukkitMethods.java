@@ -39,6 +39,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.BiFunction;
+import java.util.logging.Logger;
 
 /**
  * Created by Leoko @ dev.skamps.eu on 23.07.2016.
@@ -407,8 +408,8 @@ public class BukkitMethods implements MethodInterface {
     }
 
     @Override
-    public void log(String msg) {
-        Bukkit.getServer().getConsoleSender().sendMessage(msg.replaceAll("&", "§"));
+    public Logger getLogger() {
+        return BukkitMain.get().getLogger();
     }
 
     @Override

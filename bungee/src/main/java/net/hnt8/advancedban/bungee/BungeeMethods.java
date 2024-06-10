@@ -45,6 +45,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
+import java.util.logging.Logger;
 
 /**
  * Created by Leoko @ dev.skamps.eu on 23.07.2016.
@@ -446,8 +447,8 @@ public class BungeeMethods implements MethodInterface {
     }
 
     @Override
-    public void log(String msg) {
-        ProxyServer.getInstance().getConsole().sendMessage(TextComponent.fromLegacyText(msg.replaceAll("&", "§")));
+    public Logger getLogger() {
+        return BungeeMain.get().getLogger();
     }
 
     @Override
