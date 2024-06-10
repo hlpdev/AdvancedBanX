@@ -58,6 +58,15 @@ public class Universal {
     }
 
     /**
+     * Get AdvancedBanX's logger
+     * 
+     * @return the plugin logger
+     */
+    public Logger getLogger() {
+        return mi.getLogger();
+    }
+    
+    /**
      * Initially sets up the plugin.
      *
      * @param mi the mi
@@ -341,28 +350,6 @@ public class Universal {
             }
         }
         return false;
-    }
-
-    /**
-     * Log.
-     *
-     * @param msg the msg
-     */
-    public void log(String msg) {
-        mi.log("§8[§cAdvancedBanX§8] §7" + msg);
-        debugToFile(msg);
-    }
-
-    /**
-     * Debug.
-     *
-     * @param msg the msg
-     */
-    public void debug(Object msg) {
-        if (mi.getBoolean(mi.getConfig(), "Debug", false)) {
-            mi.log("§8[§cAdvancedBanX§8] §cDebug: §7" + msg.toString());
-        }
-        debugToFile(msg);
     }
 
     public void debugException(Exception exc) {
