@@ -8,7 +8,7 @@ dependency-reduced-pom.xml
 pom.xml.versionsBackup
 
 ### Intellij ###
-.idea/
+.idea/*
 !.idea/workspace.xml
 *.iws
 out/

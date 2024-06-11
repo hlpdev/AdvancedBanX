@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AdvancedBan-master:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c913a43-6c54-4efa-a852-1db95d02802f" name="Changes" comment="Update gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hlpdev &lt;hunterpollock2006@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hlpdev&quot;
+  }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMDpAP85xN0hD&quot;,
+        &quot;number&quot;: 1
+      },
+      &quot;lastSeen&quot;: 1717341594105
+    }
+  ]
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hlpdev/AdvancedBanX&quot;,
+    &quot;accountId&quot;: &quot;530d6ce5-a2b4-490b-aae6-aa367116cae9&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2hHqASTvEsnicOIHq26ryNG3snm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JAR Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DatabaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in AdvancedBanX-Core.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AdvancedBan.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AdvancedBanX [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AdvancedBanX-Bundle [org.apache.maven.plugins:maven-jar-plugin:3.3.0:jar].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Build AdvancedBanX.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Deploy AdvancedBanX.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Publish AdvancedBanX.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.com.intellij.ui.dsl.builder.impl.RowImpl.sdk&quot;: &quot;openjdk-22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AdvancedBanX&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.15145986&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;jdk.preference.com.intellij.ui.dsl.builder.impl.RowImpl.sdk&quot;: [
+      &quot;22=C:/Users/hunte/.jdks/openjdk-22.0.1&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AdvancedBanX\javadocs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.Deploy AdvancedBanX">
+    <configuration name="Build AdvancedBanX" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Deploy AdvancedBanX" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="customMavenHome" />
+            <option name="emulateTerminal" value="false" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="Bundled (Maven 3)" />
+            <option name="mavenHomeTypeForPersistence" value="BUNDLED3" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="showDialogWithAdvancedSettings" value="false" />
+            <option name="threads" />
+            <option name="useMavenConfig" value="true" />
+            <option name="userSettingsFile" value="" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="-Drepo.username=${env.HNT8_USERNAME} -Drepo.password=${env.HNT8_PASSWORD}" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="--settings" />
+                <option value="settings.xml" />
+                <option value="deploy:deploy-file" />
+                <option value="-DgroupId=${project.parent.groupId}" />
+                <option value="-DartifactId=${project.parent.artifactId}" />
+                <option value="-Dversion=${project.version}" />
+                <option value="-Dpackaging=jar" />
+                <option value="-Dfile=../core/target/${project.parent.artifactId}-${project.version}.jar" />
+                <option value="-DrepositoryId=hnt8" />
+                <option value="-Durl=https://java.hnt8.net" />
+                <option value="-Dusername=${HNT8_USERNAME}" />
+                <option value="-Dpassword=${HNT8_PASSWORD}" />
+                <option value="-X" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/bundle" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build AdvancedBanX" run_configuration_type="MavenRunConfiguration" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Build AdvancedBanX" />
+      <item itemvalue="Maven.Deploy AdvancedBanX" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c913a43-6c54-4efa-a852-1db95d02802f" name="Changes" comment="" />
+      <created>1717261207012</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717261207012</updated>
+      <workItem from="1717261208031" duration="145000" />
+      <workItem from="1717261359702" duration="383000" />
+      <workItem from="1717261748589" duration="132000" />
+      <workItem from="1717261886559" duration="152000" />
+      <workItem from="1717262062914" duration="1849000" />
+      <workItem from="1717263920281" duration="2289000" />
+      <workItem from="1717266222052" duration="234000" />
+      <workItem from="1717266463992" duration="4539000" />
+      <workItem from="1717271378455" duration="7564000" />
+      <workItem from="1717281990232" duration="1840000" />
+      <workItem from="1717285352493" duration="3802000" />
+      <workItem from="1717291937845" duration="616000" />
+      <workItem from="1717339352953" duration="5314000" />
+      <workItem from="1717346227948" duration="262000" />
+      <workItem from="1717360108254" duration="2338000" />
+      <workItem from="1717370764745" duration="4042000" />
+      <workItem from="1717375413242" duration="2472000" />
+      <workItem from="1717377895167" duration="996000" />
+      <workItem from="1717378897767" duration="2249000" />
+      <workItem from="1717381156168" duration="441000" />
+      <workItem from="1717381602486" duration="1842000" />
+      <workItem from="1717535481212" duration="2691000" />
+      <workItem from="1717543191648" duration="1491000" />
+      <workItem from="1717618942660" duration="2666000" />
+      <workItem from="1717623464733" duration="3726000" />
+      <workItem from="1717634316341" duration="2395000" />
+      <workItem from="1717861557520" duration="519000" />
+      <workItem from="1717862091586" duration="1851000" />
+      <workItem from="1717863948940" duration="1147000" />
+      <workItem from="1717865102214" duration="630000" />
+      <workItem from="1717865738342" duration="279000" />
+      <workItem from="1717866023245" duration="345000" />
+      <workItem from="1717866373906" duration="1034000" />
+      <workItem from="1717867416688" duration="1160000" />
+      <workItem from="1717869091853" duration="943000" />
+      <workItem from="1717872349492" duration="2084000" />
+      <workItem from="1717876039272" duration="1715000" />
+      <workItem from="1717952307653" duration="1310000" />
+      <workItem from="1717953670545" duration="1804000" />
+      <workItem from="1717982557124" duration="2301000" />
+      <workItem from="1717984881820" duration="900000" />
+      <workItem from="1717985909505" duration="7312000" />
+      <workItem from="1718052662636" duration="7383000" />
+      <workItem from="1718075251356" duration="127000" />
+      <workItem from="1718075491431" duration="352000" />
+    </task>
+    <task id="LOCAL-00030" summary="Updated strings to reflect fork">
+      <option name="closed" value="true" />
+      <created>1717378171232</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717378171232</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Updated strings to reflect fork&#10;&#10;Signed-off-by: hlpdev &lt;hunterpollock2006@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1717378179700</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717378179700</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Updated version to 3.0.4">
+      <option name="closed" value="true" />
+      <created>1717378204301</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1717378204301</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Removed duplicate dependency">
+      <option name="closed" value="true" />
+      <created>1717540959278</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1717540959278</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Removed deprecated vars">
+      <option name="closed" value="true" />
+      <created>1717540968835</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1717540968835</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Updated hsqldb">
+      <option name="closed" value="true" />
+      <created>1717540982121</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717540982121</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Updated google gson">
+      <option name="closed" value="true" />
+      <created>1717540989827</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1717540989827</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Changed to java lang version 11">
+      <option name="closed" value="true" />
+      <created>1717541000538</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1717541000538</updated>
+    </task>
+    <task id="LOCAL-00038" summary="If the prefix is empty, a space will not be appended to the prefix">
+      <option name="closed" value="true" />
+      <created>1717541033881</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1717541033881</updated>
+    </task>
+    <task id="LOCAL-00039" summary="If the prefix is empty, a space will not be appended to the prefix&#10;&#10;Fixes #4">
+      <option name="closed" value="true" />
+      <created>1717541047338</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1717541047338</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Rename the Metrics class in the Bukkit module to BukkitMetrics">
+      <option name="closed" value="true" />
+      <created>1717544495507</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1717544495507</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Rename the Metrics class in the Bungee module to BungeeMetrics">
+      <option name="closed" value="true" />
+      <created>1717544508946</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1717544508946</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Update version strings">
+      <option name="closed" value="true" />
+      <created>1717544519958</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1717544519958</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Update actions JDK">
+      <option name="closed" value="true" />
+      <created>1717619325018</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1717619325018</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Changed the Bundle module output file to take the name of the parent project instead of itself. The new output jar will be named &quot;AdvancedBanX-0.0.0.jar&quot; instead of &quot;AdvancedBanX-Bundle-0.0.0.jar&quot;">
+      <option name="closed" value="true" />
+      <created>1717619461999</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1717619461999</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Change workflow setup-java version to v4">
+      <option name="closed" value="true" />
+      <created>1717619750471</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1717619750471</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added cloudnet v4 dependencies">
+      <option name="closed" value="true" />
+      <created>1717623798150</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1717623798150</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added cloudnet v4 dependencies&#10;&#10;Signed-off-by: hlpdev &lt;hunterpollock2006@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1717623804865</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1717623804865</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Created CloudNetV4Support class">
+      <option name="closed" value="true" />
+      <created>1717623815922</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1717623815922</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added CloudNetV4 to the CloudSupportHandler">
+      <option name="closed" value="true" />
+      <created>1717623829951</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1717623829951</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Spacing">
+      <option name="closed" value="true" />
+      <created>1717633978736</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1717633978737</updated>
+    </task>
+    <task id="LOCAL-00051" summary="rm test">
+      <option name="closed" value="true" />
+      <created>1717863688741</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1717863688741</updated>
+    </task>
+    <task id="LOCAL-00052" summary="update distro management">
+      <option name="closed" value="true" />
+      <created>1717863726943</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1717863726943</updated>
+    </task>
+    <task id="LOCAL-00053" summary="update version string">
+      <option name="closed" value="true" />
+      <created>1717867459797</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1717867459797</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Added deploy settings">
+      <option name="closed" value="true" />
+      <created>1717869124403</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1717869124403</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Added distribution management to bundle&#10;&#10;#11">
+      <option name="closed" value="true" />
+      <created>1717869144055</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1717869144055</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Update readme &#10;&#10;Closes #11">
+      <option name="closed" value="true" />
+      <created>1717869594366</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1717869594366</updated>
+    </task>
+    <task id="LOCAL-00057" summary="API BREAKING CHANGE&#10;&#10;Removed the log method from the method interface, added the getLogger method">
+      <option name="closed" value="true" />
+      <created>1717985971610</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1717985971610</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Removed the log method override, implemented the getLogger override">
+      <option name="closed" value="true" />
+      <created>1717986035341</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986035341</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Use getLogger#info instead of removed log method">
+      <option name="closed" value="true" />
+      <created>1717986056689</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986056689</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Use getLogger#info instead of removed log method">
+      <option name="closed" value="true" />
+      <created>1717986061509</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986061509</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986116448</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986116448</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986132415</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986132415</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986141713</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986141713</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986157264</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986157264</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986170195</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986170195</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986210443</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986210443</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log">
+      <option name="closed" value="true" />
+      <created>1717986267419</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986267419</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Print stacktrace to getLogger#fine instead of system.out">
+      <option name="closed" value="true" />
+      <created>1717986294002</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986294002</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Removed log and debug methods from universal, added getLogger method">
+      <option name="closed" value="true" />
+      <created>1717986321092</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986321092</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Update version strings">
+      <option name="closed" value="true" />
+      <created>1717986351736</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986351736</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Added the slf4j-api dependency">
+      <option name="closed" value="true" />
+      <created>1717986393937</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986393937</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Changed the slf4j-jdk14 dependency scope from runtime to compile">
+      <option name="closed" value="true" />
+      <created>1717986415294</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986415294</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Update dependabot.yml to force dependabot to run daily, m-f">
+      <option name="closed" value="true" />
+      <created>1717986900550</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1717986900550</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Added MiniMessage and Adventure ANSI serializer dependencies">
+      <option name="closed" value="true" />
+      <created>1717987957432</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1717987957432</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Created private SerializeMiniMessage helper method">
+      <option name="closed" value="true" />
+      <created>1717987982162</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1717987982162</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Replaced legacy formatting with MiniMessage formatting">
+      <option name="closed" value="true" />
+      <created>1717988005981</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1717988005981</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Fix dependencies for HikariCP and SLF4J">
+      <option name="closed" value="true" />
+      <created>1717996291684</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1717996291684</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Update gitignore">
+      <option name="closed" value="true" />
+      <created>1718075640781</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1718075640782</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT_PROFILE" value="Default" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Added cloudnet v4 dependencies&#10;&#10;Signed-off-by: hlpdev &lt;hunterpollock2006@gmail.com&gt;" />
+    <MESSAGE value="Created CloudNetV4Support class" />
+    <MESSAGE value="Added CloudNetV4 to the CloudSupportHandler" />
+    <MESSAGE value="Spacing" />
+    <MESSAGE value="rm test" />
+    <MESSAGE value="update distro management" />
+    <MESSAGE value="update version string" />
+    <MESSAGE value="Added deploy settings" />
+    <MESSAGE value="Added distribution management to bundle&#10;&#10;#11" />
+    <MESSAGE value="Update readme &#10;&#10;Closes #11" />
+    <MESSAGE value="API BREAKING CHANGE&#10;&#10;Removed the log method from the method interface, added the getLogger method" />
+    <MESSAGE value="Removed the log method override, implemented the getLogger override" />
+    <MESSAGE value="Use getLogger#info instead of removed log method" />
+    <MESSAGE value="Use getLogger#info instead of removed log method&#10;Use getLogger#severe instead of system.err&#10;Use getLogger#fine instead of removed debug&#10;Use getLogger#warning instead of removed log" />
+    <MESSAGE value="Print stacktrace to getLogger#fine instead of system.out" />
+    <MESSAGE value="Removed log and debug methods from universal, added getLogger method" />
+    <MESSAGE value="Update version strings" />
+    <MESSAGE value="Added the slf4j-api dependency" />
+    <MESSAGE value="Changed the slf4j-jdk14 dependency scope from runtime to compile" />
+    <MESSAGE value="Update dependabot.yml to force dependabot to run daily, m-f" />
+    <MESSAGE value="Added MiniMessage and Adventure ANSI serializer dependencies" />
+    <MESSAGE value="Created private SerializeMiniMessage helper method" />
+    <MESSAGE value="Replaced legacy formatting with MiniMessage formatting" />
+    <MESSAGE value="Fix dependencies for HikariCP and SLF4J" />
+    <MESSAGE value="Update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore" />
+  </component>
+</project>
