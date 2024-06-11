@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c913a43-6c54-4efa-a852-1db95d02802f" name="Changes" comment="Update gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +195,7 @@
                 <option value="-DartifactId=${project.parent.artifactId}" />
                 <option value="-Dversion=${project.version}" />
                 <option value="-Dpackaging=jar" />
-                <option value="-Dfile=../core/target/${project.parent.artifactId}-${project.version}.jar" />
+                <option value="-Dfile=target/${project.parent.artifactId}-${project.version}.jar" />
                 <option value="-DrepositoryId=hnt8" />
                 <option value="-Durl=https://java.hnt8.net" />
                 <option value="-Dusername=${HNT8_USERNAME}" />
@@ -286,14 +286,8 @@
       <workItem from="1718052662636" duration="7383000" />
       <workItem from="1718075251356" duration="127000" />
       <workItem from="1718075491431" duration="352000" />
-    </task>
-    <task id="LOCAL-00030" summary="Updated strings to reflect fork">
-      <option name="closed" value="true" />
-      <created>1717378171232</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1717378171232</updated>
+      <workItem from="1718075852242" duration="71000" />
+      <workItem from="1718076012807" duration="34000" />
     </task>
     <task id="LOCAL-00031" summary="Updated strings to reflect fork&#10;&#10;Signed-off-by: hlpdev &lt;hunterpollock2006@gmail.com&gt;">
       <option name="closed" value="true" />
@@ -679,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718075640782</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Update gitignore">
+      <option name="closed" value="true" />
+      <created>1718075908756</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1718075908756</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
