@@ -87,7 +87,9 @@
             <version>4.17.0</version>
         </dependency>
     </dependencies>
+    
     <build>
+        <finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

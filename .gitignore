@@ -9,6 +9,7 @@ pom.xml.versionsBackup
 
 ### Intellij ###
 .idea/
+!.idea/workspace.xml
 *.iws
 out/
 *.iml
