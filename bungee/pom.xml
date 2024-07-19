@@ -102,7 +102,7 @@
         <dependency>
             <groupId>com.imaginarycode.minecraft</groupId>
             <artifactId>RedisBungee</artifactId>
-            <version>0.3.8-20151118.214627-3</version>
+            <version>0.6.5</version>
             <scope>provided</scope>
         </dependency>
 
