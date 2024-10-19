@@ -3,7 +3,7 @@
 Bukkit & BungeeCord Plugin Bundle <br>
 Check out our [Spigot-Page](https://www.spigotmc.org/resources/advancedbanx.117067/) for more  information!
 
-![Minecraft Version 1.7-1.20](https://img.shields.io/badge/supports%20minecraft%20versions-1.7--1.20-brightgreen.svg)
+![Minecraft Version 1.7-1.21](https://img.shields.io/badge/supports%20minecraft%20versions-1.7--1.21-brightgreen.svg)
 ![license GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-lightgrey.svg)
 
 _Coded by Leoko_ 
