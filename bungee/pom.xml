@@ -58,7 +58,7 @@
         <dependency>
             <groupId>eu.cloudnetservice.cloudnet</groupId>
             <artifactId>bridge</artifactId>
-            <version>4.0.0-RC5</version>
+            <version>4.0.0-RC11.1</version>
             <scope>provided</scope>
         </dependency>
         
