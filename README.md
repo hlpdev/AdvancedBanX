@@ -59,6 +59,9 @@ The API requires the AdvancedBanX plugin to be installed on the server. When mak
 ## Goals
 * Sponge Support
 * Velocity Support
+* Forge Support
+* NeoForge Support
+* Fabric Support
 
 
 [//]: # (## API)
