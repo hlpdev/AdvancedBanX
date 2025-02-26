@@ -246,7 +246,7 @@ Warns:
 
 WarnsOwn:
   OutOfIndex: "<red>There is no page %PAGE%!</red>"
-  NoEntries: "<red><italic>You has no warnings yet</italic></red>"
+  NoEntries: "<red><italic>You have no warnings.</italic></red>"
   Header:
     - "%PREFIX% <gray>Your warnings:</gray>"
     - "<yellow><italic>Duration</italic></yellow> <dark_gray>|</dark_gray> <gray><italic>Warned by</italic></gray>"
@@ -263,7 +263,7 @@ WarnsOwn:
 Notes:
   Usage: "<red>Usage</red> <dark_gray>»</dark_gray> <gray><italic>/notes [Name] (Page) <red>or</red> /notes (Page)</italic></gray>"
   OutOfIndex: "<red>There is no page %PAGE%!</red>"
-  NoEntries: "<red><italic>%NAME% has no notes yet</italic></red>"
+  NoEntries: "<red><italic>%NAME% has no notes.</italic></red>"
   Header:
     - ""
     - "%PREFIX% <gray>Notes for %NAME%:</gray>"
