@@ -1,4 +1,5 @@
-_**PLEASE KEEP IN MIND THAT THIS IS A FORK OF THE ORIGINAL ADVANCED BAN PLUGIN, DO NOT REQUEST SUPPORT IN THE ADVANCED BAN DISCORD, INSTEAD PLEASE GET SUPPORT ON THE GITHUB REPOSITORY ISSUES PAGE**_
+> [!IMPORTANT]  
+> Please keep in mind that this is a fork of the original AdvancedBan plugin. Do not request support for this plugin in the AdvancedBan discord, instead, please make an issue in this repository.
 
 # AdvancedBanX 3.1.0
 
