@@ -22,7 +22,7 @@
         <skipTests>false</skipTests>
         <trimStackTrace>true</trimStackTrace>
         
-        <junit5.version>5.10.3</junit5.version>
+        <junit5.version>5.12.0</junit5.version>
     </properties>
 
     <build>
